@@ -1,0 +1,3356 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAMCommon.Base</name>
+    </assembly>
+    <members>
+        <member name="T:XAMCommon.Base.StringByLengthComparer">
+            <summary>
+            A string comparer which checks also the lenght of the string first.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.StringByLengthComparer.Compare(System.Object,System.Object)">
+            <summary>
+            Compare two objects as strings
+            </summary>
+            <param name="obj1"></param>
+            <param name="obj2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringByLengthComparer.Compare(System.String,System.String)">
+            <summary>
+            Compare the strings and checks the length of the strings first.
+            </summary>
+            <param name="str1">The first string.</param>
+            <param name="str2">The second string.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.ArrayExtensions">
+            <summary>
+            Array Extensions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.ArrayExtensions.ToCommaString(System.Array)">
+            <summary>
+            To the comma string.
+            </summary>
+            <param name="arr">The arr.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ArrayExtensions.SubArray``1(``0[],System.Int32)">
+            <summary>
+            Subs the array.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data">The data.</param>
+            <param name="start">The start.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ArrayExtensions.SubArray``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Subs the array.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data">The data.</param>
+            <param name="start">The start.</param>
+            <param name="length">The length.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.ByteArrayExtensions">
+            <summary>
+            Byte Array Extensions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Collections.Generic.IEnumerable{System.Byte},System.Int32)">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Collections.Generic.IEnumerable{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <param name="offset">The offset.</param>
+            <param name="length">The length.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            data
+            or
+            sequence
+            </exception>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Byte)">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Byte,System.Int32)">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetStartIndex(System.Collections.Generic.IEnumerable{System.Byte},System.Byte,System.Int32,System.Int32)">
+            <summary>
+            Gets the start index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="sequence">The sequence.</param>
+            <param name="offset">The offset.</param>
+            <param name="length">The length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetText(System.Byte[])">
+            <summary>
+            Gets the text.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetText(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Gets the text.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="encoding">The encoding.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetText(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Gets the text.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="startIndex">The start index.</param>
+            <param name="length">The length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.GetText(System.Byte[],System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+            Gets the text.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="startIndex">The start index.</param>
+            <param name="length">The length.</param>
+            <param name="encoding">The encoding.</param>
+            <returns></returns>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="M:XAMCommon.Base.ByteArrayExtensions.ToArrayString(System.Byte[])">
+            <summary>
+            Automatics the array string.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.ByteExtensions">
+            <summary>
+            Byte Method Extensions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.ByteExtensions.SetBit(System.Byte,System.Int32,System.Boolean)">
+            <summary>
+            Sets the bit.
+            </summary>
+            <param name="b">The b.</param>
+            <param name="index">The index.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteExtensions.SetBit(System.Int32,System.Boolean)">
+            <summary>
+            Sets the bit.
+            </summary>
+            <param name="value">if set to <c>true</c> [value].</param>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteExtensions.GetBit(System.Byte,System.Int32)">
+            <summary>
+            Gets the bit.
+            </summary>
+            <param name="b">The b.</param>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteExtensions.SetBits(System.Byte,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the bits.
+            </summary>
+            <param name="b">The b.</param>
+            <param name="bit0">if set to <c>true</c> [bit0].</param>
+            <param name="bit1">if set to <c>true</c> [bit1].</param>
+            <param name="bit2">if set to <c>true</c> [bit2].</param>
+            <param name="bit3">if set to <c>true</c> [bit3].</param>
+            <param name="bit4">if set to <c>true</c> [bit4].</param>
+            <param name="bit5">if set to <c>true</c> [bit5].</param>
+            <param name="bit6">if set to <c>true</c> [bit6].</param>
+            <param name="bit7">if set to <c>true</c> [bit7].</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.ByteExtensions.SetBits(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the bits.
+            </summary>
+            <param name="bit0">if set to <c>true</c> [bit0].</param>
+            <param name="bit1">if set to <c>true</c> [bit1].</param>
+            <param name="bit2">if set to <c>true</c> [bit2].</param>
+            <param name="bit3">if set to <c>true</c> [bit3].</param>
+            <param name="bit4">if set to <c>true</c> [bit4].</param>
+            <param name="bit5">if set to <c>true</c> [bit5].</param>
+            <param name="bit6">if set to <c>true</c> [bit6].</param>
+            <param name="bit7">if set to <c>true</c> [bit7].</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.DoubleExtensions">
+            <summary>
+            Double Method Extensions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.DoubleExtensions.RoundUp(System.Double)">
+            <summary>
+            Rounds up.
+            </summary>
+            <param name="valueToRound">The value to round.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.EnumExtensions">
+            <summary>
+            Enum Extensions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.EnumExtensions.ParseOrDefault``1(System.String,``0)">
+            <summary>
+            Parses the or default.
+            </summary>
+            <typeparam name="TEnum">The type of the enum.</typeparam>
+            <param name="value">The value.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">TEnum has to a a Enum</exception>
+        </member>
+        <member name="M:XAMCommon.Base.EnumExtensions.GetIntValue(System.Enum)">
+            <summary>
+            Gets the int value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.EnumExtensions.GetAttribute``1(System.Enum)">
+            <summary>
+            get a attribute from a enum value
+            </summary>
+            <typeparam name="TAttribute">the attribute type</typeparam>
+            <param name="value">the enum value</param>
+            <returns>the attribute</returns>
+        </member>
+        <member name="M:XAMCommon.Base.Extensions.SecureStringExtensions.ToUnsecureString(System.Security.SecureString)">
+            <summary>
+            Converts a SecureString to a normal string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Extensions.SecureStringExtensions.ToSecureString(System.String)">
+            <summary>
+            Converts a string to a SecureString. (SecureString must be disposed!)
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Extensions.ListExtension">
+            <summary>
+            Extension for List
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Extensions.ListExtension.TryAddRange``1(System.Collections.Generic.List{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds a collection to a list. If the collection is null no exception is thrown.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="list"></param>
+            <param name="collection"></param>
+        </member>
+        <member name="T:XAMCommon.Base.IO.DirectoryProvider">
+            <summary>
+             Directory provider to manipulete directories. Class is usefull to get code under test.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.IO.DirectoryProvider.Current">
+            <summary>
+            Gets the current DirectoryProvider
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IO.DirectoryProvider.ResetToDefault">
+            <summary>
+            Reset the DirectoryProvider the the DefaultDirectoryProvider
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.DefaultDirectoryProvider">
+            <summary>
+            The DefaultDirectoryProvider. Gets the methodes from System.IO.Directory.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.FileProvider">
+            <summary>
+             File provider to manipulete files. Class is usefull to get code under test.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.IO.FileProvider.Current">
+            <summary>
+            Gets the current FileProvider
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IO.FileProvider.ResetToDefault">
+            <summary>
+            Reset the FileProvider the the DefaultFileProvider
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.DefaultFileProvider">
+            <summary>
+            The DefaultFileProvider. Gets the methodes from System.IO.File.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.IFileVersion">
+            <summary>
+            Interface to implment the FileVersionInfo
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.FileVersionInfoProvider">
+            <summary>
+             FileVersionInfo provider to get file version infos. Class is usefull to get code under test.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.IO.FileVersionInfoProvider.Current">
+            <summary>
+            Gets the current FileVersionProvider
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IO.FileVersionInfoProvider.ResetToDefault">
+            <summary>
+            Reset the FileVersionProvider the the DefaultFileVersionProvider
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IO.FileVersionInfoProvider.GetFileVersion(System.String)">
+            <summary>
+            Gets the file version form an assemnbly file as string .
+            </summary>
+            <param name="fileName">The path of the assembyl file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IO.FileVersionInfoProvider.GetVersionInfo(System.String)">
+            <summary>
+            Gets the file version info from an assembly.
+            </summary>
+            <param name="fileName">The path of the assembly file.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.IO.DefaultFileVersionProvider">
+            <summary>
+            The DefaultFileVersionProvider. Gets the info from FileVersionInfo class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IO.DefaultFileVersionProvider.GetFileVersion(System.String)">
+            <summary>
+            Gets the file version of a file.
+            </summary>
+            <param name="fileName">The path of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IO.DefaultFileVersionProvider.GetVersionInfo(System.String)">
+            <summary>
+            Gets the FileVersionInfo of a file.
+            </summary>
+            <param name="fileName">The path of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.IO.IDirectory">
+            <summary>
+             Interface to manipulete directories. With this interface you can make your classes, which uses System.IO.Directoy, testable.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.IO.IFile">
+            <summary>
+             Interface to manipulete files. With this interface you can make your classes, which uses System.IO.File, testable.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Registry.WindowsRegistry">
+            <summary>
+            Class for get and set values from the windows registry.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.GetCurrentUserValue``1(System.String,System.String)">
+            <summary>
+            Gets a value from the HKEY_CURRENT_USER registry.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path of the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.GetCurrentUserValue``1(System.String,System.String,``0)">
+            <summary>
+            Gets a value from the HKEY_CURRENT_USER registry. If the value doesn't exist it will be created.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path of the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value if it doesn't exist.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.SetCurrentUserValue``1(System.String,System.String,``0)">
+            <summary>
+            Set a value to the HKEY_CURRENT_USER registry.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path of the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.GetLocalMachineValue``1(System.String,System.String)">
+            <summary>
+            Gets a value from the HKEY_LOCAL_MACHINE registry.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path for the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.GetLocalMachineValue``1(System.String,System.String,``0)">
+            <summary>
+            Gets a value from the HKEY_LOCAL_MACHINE registry. If the value doesn't exist it will be created.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path of the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value if it doesn't exist.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.WindowsRegistry.SetLocalMachineValue``1(System.String,System.String,``0)">
+            <summary>
+            Set a value to the HKEY_LOCAL_MACHINE registry.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyPath">The key path of the registry entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:XAMCommon.Base.Registry.Registry">
+            <summary>
+            functions to access the windows registry
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Registry.Registry.RegistryPath">
+            <summary>
+            Gets the registry path
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetCurrentUserValue``1(System.String)">
+            <summary>
+            Gets a value from the users windows registry.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetCurrentUserKeyValue``1(System.String,System.String)">
+            <summary>
+            Gets a value from the users windows registry.
+            Registry path is <propertyref name="RegistryPath"/> + subKey.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetCurrentUserValue``1(System.String,``0)">
+            <summary>
+            Gets a value from the users windows registry. If the value doesn't exist it will be created.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetCurrentUserKeyValue``1(System.String,System.String,``0)">
+            <summary>
+            Gets a value from the users windows registry. If the value doesn't exist it will be created.
+            Registry path is <propertyref name="RegistryPath"/> + subKey.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.SetCurrentUserValue``1(System.String,``0)">
+            <summary>
+            Sets a value in the users windows registry.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.SetCurrentUserKeyValue``1(System.String,System.String,``0)">
+            <summary>
+            Sets a value in the users windows registry.
+            Registry path i <propertyref name="RegistryPath"/> + subKey
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetLocalMachineValue``1(System.String)">
+            <summary>
+            Gets a value from the local machine registry.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetLocalMachineKeyValue``1(System.String,System.String)">
+            <summary>
+            Gets a value from the local machine registry.
+            Registry path is <propertyref name="RegistryPath"/> + the subkey.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetLocalMachineValue``1(System.String,``0)">
+            <summary>
+            Gets a value from the local machine registry. If the entry doesn't exist it will be created.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.GetLocalMachineKeyValue``1(System.String,System.String,``0)">
+            <summary>
+            Gets a value from the local machine registry. If the entry doesn't exist it will be created.
+            Registry path is <propertyref name="RegistryPath"/> + subKey.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.SetLocalMachineValue``1(System.String,``0)">
+            <summary>
+            Sets a value to the local machine registry.
+            Registry path is <propertyref name="RegistryPath"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value</param>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.Registry.SetLocalMachineKeyValue``1(System.String,System.String,``0)">
+            <summary>
+            Sets a value to the local machine registry.
+            Registry path is <propertyref name="RegistryPath"/> + subKey.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subKey">The sub key path of the entry.</param>
+            <param name="valueName">The name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:XAMCommon.Base.Registry.IRegistry">
+            <summary>
+            Interface to get and set Windows Registry entries
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Registry.RegistryProvider">
+            <summary>
+            Class for manipulating windows registry entries. Class is usefull to get code under test.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Registry.RegistryProvider.Current">
+            <summary>
+            Gets the current RegistryProvider
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Registry.RegistryProvider.ResetToDefault">
+            <summary>
+            Reset the RegistryProvider the the DefaultRegistryProvider
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Registry.DefaultRegistryProvider">
+            <summary>
+            Default Registry provider for windows registry.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Serialization.DataContractSerialization">
+            <summary>
+            Serializer for DataContract
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.#ctor">
+            <summary>
+            Creates a DataContractSerialization object.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.#ctor(System.Object)">
+            <summary>
+            Creates a DataContractSerialization object with the type ot the object.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.#ctor(System.Object,System.Type[])">
+            <summary>
+            Creates a DataContractSerialization object with the type ot the object ana a list of known types.
+            </summary>
+            <param name="obj"></param>
+            <param name="extraTypes"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.Serialize(System.Object)">
+            <summary>
+            Serialize object to string
+            </summary>
+            <param name="pObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.Serialize(System.Object,System.String@)">
+            <summary>
+            Serialize object to string
+            </summary>
+            <param name="pObject"></param>
+            <param name="ErrorMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.GetOrAddSerializerType(System.Type,System.Type[])">
+            <summary>
+            Get serializer for type. Create a new one, if not existing
+            </summary>
+            <param name="t"></param>
+            <param name="extraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.Deserialize(System.String,System.Type,System.Type[])">
+            <summary>
+            Deserialize string to object type
+            </summary>
+            <param name="xmlString"></param>
+            <param name="type"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.SerializeObject(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="pObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.SerializeObject(System.Object,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="pObject"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.SerializeObject(System.Object,System.String@,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="pObject"></param>
+            <param name="ErrorMsg"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.SerializeObject(System.Runtime.Serialization.DataContractSerializer,System.Object,System.String@,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="ds"></param>
+            <param name="pObject"></param>
+            <param name="ErrorMsg"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.DeserializeObject(System.String,System.Type,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="xmlString"></param>
+            <param name="type"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerialization.DeserializeObject(System.Runtime.Serialization.DataContractSerializer,System.String,System.Type,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="ds"></param>
+            <param name="xmlString"></param>
+            <param name="type"></param>
+            <param name="ExtraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Serialization.DataContractSerializationExtensions">
+            <summary>
+            Extensions for DataContractSerialization
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerializationExtensions.SerializeDataContract``1(``0,System.Type[])">
+            <summary>
+            Serialize object to string
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="extraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerializationExtensions.DeserializeDataContract``1(System.String,System.Type[])">
+            <summary>
+            Deserialize string to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="str"></param>
+            <param name="extraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.DataContractSerializationExtensions.DeserializeDataContract(System.String,System.Type,System.Type[])">
+            <summary>
+            Deserialize string to object
+            </summary>
+            <param name="str"></param>
+            <param name="type"></param>
+            <param name="extraTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Serialization.SerializerKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Base.Serialization.SerializerKey.T">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Base.Serialization.SerializerKey.extraT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.SerializerKeyCompare.Equals(XAMCommon.Base.Serialization.SerializerKey,XAMCommon.Base.Serialization.SerializerKey)">
+            <summary>
+            Compare SerializerKey
+            </summary>
+            <param name="b1"></param>
+            <param name="b2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Serialization.SerializerKeyCompare.GetHashCode(XAMCommon.Base.Serialization.SerializerKey)">
+            <summary>
+            Calculate hash code for SerializerKey
+            </summary>
+            <param name="bx"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.AssemblyHelper">
+            <summary>
+            Helper for assembly files
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.AssemblyHelper.CreateTypeInstance``1(System.String,System.String,System.Object[])">
+            <summary>
+            Create an instance of type with constructor arguments
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="assembly"></param>
+            <param name="typeName"></param>
+            <param name="ctorArguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.AssemblyHelper.CreateTypeInstanceWithArgumentTypes``1(System.String,System.String,System.Type[],System.Object[])">
+            <summary>
+            Create an instance of type with constructor arguments and types for constructor arguments
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="assembly"></param>
+            <param name="typeName"></param>
+            <param name="ctorTypes"></param>
+            <param name="ctorArguments"></param>
+            <returns></returns>
+            <exception cref="T:System.MissingMethodException"></exception>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <exception cref="T:System.TypeLoadException"></exception>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.Crc32">
+            <summary>
+            CRC 32 Checksummen-Berechnung
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Base.Utilities.Crc32.crctab">
+            <summary>
+            CRC32 Tabelle (Lookup-Tabelle)
+            wird für die Berechnung der CRC32 Checksumme benötigt
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.Crc32.ComputeAsByte(System.Byte[])">
+            <summary>
+            Crc32 Checksummen Berechnung
+            </summary>
+            <param name="data">ByteArray des Befehls</param>
+            <returns>4 byte CRC Checksumme</returns>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.Crc32.ComputeAsInt(System.Byte[])">
+            <summary>
+            Crc32 Checksummen Berechnung
+            </summary>
+            <param name="data">ByteArray für Brechnung.</param>
+            <returns>Uint CRC Checksumme</returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.LogonHelper">
+            <summary>
+            Provides a helper for using network path with user/password
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.LogonHelper.LogonType">
+            <summary>
+            The logon type used by the logon helper
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.LogonHelper.LogonProvider">
+            <summary>
+            The logon provider used by the logon helper
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LogonHelper.Logon(System.String,System.String,System.String,XAMCommon.Base.Utilities.LogonHelper.LogonType,XAMCommon.Base.Utilities.LogonHelper.LogonProvider)">
+            <summary>
+            Logon to a network path with user/password
+            </summary>
+            <param name="user">The user name</param>
+            <param name="domain">The domain</param>
+            <param name="password">The password</param>
+            <param name="logonType">The logon type used for the authentication</param>
+            <param name="logonProvider">The logon provider used for the authentication</param>
+            <returns>A WindowsIdentity on success. This identity instance can be used for creating a context, which can be used for accessing the network path with the provided credentials.</returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.LazyStringJoin`1">
+            <summary>
+            String.Join object, which isnt converted to a string before calling the ToString() method
+            </summary>
+            <typeparam name="T">The enumerable type</typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LazyStringJoin`1.#ctor(System.String,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">A collection that contains the objects to concatenate.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LazyStringJoin`1.#ctor(System.String,System.Array)">
+            <summary>
+            Creates the String.Join object from Array
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">An array that contains the objects to concatenate.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LazyStringJoin`1.#ctor(System.String,System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32)">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">A collection that contains the objects to concatenate.</param>
+            <param name="startIndex">The start index</param>
+            <param name="count">The count</param>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LazyStringJoin`1.#ctor(System.String,System.Array,System.Int32,System.Int32)">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">An array that contains the objects to concatenate.</param>
+            <param name="startIndex">The start index</param>
+            <param name="count">The count</param>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.LazyStringJoin`1.ToString">
+            <summary>
+            Creates a string out of the object
+            </summary>
+            <returns>The generated string</returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.StringHelper">
+            <summary>
+            String functions
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.StringHelper.LazyJoin``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <typeparam name="T">The enumerable type</typeparam>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">A collection that contains the objects to concatenate.</param>
+            <returns>The object</returns>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.StringHelper.LazyJoinArray(System.String,System.Array)">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">An array that contains the objects to concatenate.</param>
+            <returns>The object</returns>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.StringHelper.LazyJoin``1(System.String,System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <typeparam name="T">The enumerable type</typeparam>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">A collection that contains the objects to concatenate.</param>
+            <param name="startIndex">The start index</param>
+            <param name="count">The count</param>
+            <returns>The object</returns>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.StringHelper.LazyJoinArray(System.String,System.Array,System.Int32,System.Int32)">
+            <summary>
+            Creates the String.Join object
+            </summary>
+            <param name="separator">The string to use as a separator.</param>
+            <param name="arg">An array that contains the objects to concatenate.</param>
+            <param name="startIndex">The start index</param>
+            <param name="count">The count</param>
+            <returns>The object</returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.AdminProcess">
+            <summary>
+            Start a process running as administrator.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.AdminProcess.StartAsAdmin(System.String,System.String)">
+            <summary>
+            Starts a process that is running as administrator.
+            </summary>
+            <param name="fileName">The file name of the process.</param>
+            <param name="arguments">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Utilities.HardwareClock">
+            <summary>
+            this class provides functionality to set the hardware clock
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.HardwareClock.SetHostTime(System.DateTime)">
+            <summary>
+            set the local hardware clock to the provided DateTime (no UTC)
+            </summary>
+            <param name="time">the time</param>
+        </member>
+        <member name="M:XAMCommon.Base.Utilities.HardwareClock.SetHostTimeUTC(System.DateTime)">
+            <summary>
+            set the local hardware clock to the provided DateTime (UTC)
+            </summary>
+            <param name="time">the time in UTC Format</param>
+        </member>
+        <member name="T:XAMCommon.Base.BigEndian">
+            <summary>
+            Type Conversation with Big Endian Encoding
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array to uint16. (2 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Array(System.Boolean[])">
+            <summary>
+            Bool array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Array(System.Byte[])">
+            <summary>
+            Byte array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Array(System.Int32[])">
+            <summary>
+            Int array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Array(System.UInt32[])">
+            <summary>
+            UInt array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To uint32. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt8(System.Byte)">
+            <summary>
+            To the int8.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt16(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            Byte Array To int16. (2 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <param name="ignoreEndianess">Ignore the endianess.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To int32. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32Array(System.Byte[])">
+            <summary>
+            Byte Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32Array(System.UInt16[])">
+            <summary>
+            Ushort Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32Array(System.Boolean[])">
+            <summary>
+            Boolean Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32Array(System.Byte[])">
+            <summary>
+            Ushort Array To UInt32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32Array(System.UInt16[])">
+            <summary>
+            Ushort Array To UInt32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32Array(System.Boolean[])">
+            <summary>
+            Boolean Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToFloat(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To float. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToDouble(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To Dobule. (8 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToReal(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array to real. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUShortBytes(System.UInt16)">
+            <summary>
+            Automatics the authentication short bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Bytes(System.UInt16)">
+            <summary>
+            Short Value (int16) to 2 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt16Bytes(System.UInt16[])">
+            <summary>
+            Short Values (int16) to 2*length Bytes (Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32Bytes(System.UInt32)">
+            <summary>
+            uint Value (uint32) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToUInt32Bytes(System.UInt32[])">
+            <summary>
+            To the uint32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToIntBytes(System.Int32)">
+            <summary>
+            Short Value (int32) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32Bytes(System.Int32)">
+            <summary>
+            To the int32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt32Bytes(System.Int32[])">
+            <summary>
+            To the int32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToInt16Bytes(System.Int16)">
+            <summary>
+            To the int16 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToFloatBytes(System.Single)">
+            <summary>
+            Short Value (float) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="Value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToDoubleBytes(System.Double)">
+            <summary>
+            Short Value (double) to 8 Bytes (Big Endian)
+            </summary>
+            <param name="Value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanBytes(System.Boolean[])">
+            <summary>
+            To the boolean bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanArray(System.Byte[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanArrayInternal(System.Byte[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanArray(System.UInt16[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanArray(System.Int32[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.BigEndian.ToBooleanArray(System.UInt32[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.EqualsHelper">
+            <summary>
+            Equals Helper
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.EqualsHelper.TypesAreEquals``1(``0,System.Object,``0@)">
+            <summary>
+            Typeses the are equals.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="one">The one.</param>
+            <param name="two">The two.</param>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.EqualsHelper.ObjectEqual(System.Object,System.Object)">
+            <summary>
+            Objects the equal.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="secound">The secound.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.EqualsHelper.NumericEqual(System.Object,System.Object,System.Double)">
+            <summary>
+            Compares two objects if they are numeric equal with deadband
+            try to convert both to double and compare with deadband
+            otherwise compare with ObjectEqual
+            </summary>
+            <param name="first">The first.</param>
+            <param name="secound">The secound.</param>
+            <param name="deadband">The deadband.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.LittleEndian">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            Byte array to UInt16
+            </summary>
+            <param name="Data"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Array(System.Boolean[])">
+            <summary>
+            Bool array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Array(System.Byte[])">
+            <summary>
+            Byte array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Array(System.Int32[])">
+            <summary>
+            Int array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Array(System.UInt32[])">
+            <summary>
+            UInt array to UInt16 array
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To uint32. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt8(System.Byte)">
+            <summary>
+            To the int8.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt16(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            Byte Array To int16. (2 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <param name="ignoreEndianess">Ignore endianess.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To int32. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32Array(System.Byte[])">
+            <summary>
+            Byte Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt16Array(System.UInt16[])">
+            <summary>
+            Ushort Array To Int16 array (2 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32Array(System.UInt16[])">
+            <summary>
+            Ushort Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32Array(System.Boolean[])">
+            <summary>
+            Boolean Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32Array(System.Byte[])">
+            <summary>
+            Ushort Array To UInt32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32Array(System.UInt16[])">
+            <summary>
+            Ushort Array To UInt32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32Array(System.Boolean[])">
+            <summary>
+            Boolean Array To Int32 array (4 Byte - Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToFloat(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To float. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToDouble(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array To Dobule. (8 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToReal(System.Byte[],System.Int32)">
+            <summary>
+            Byte Array to real. (4 Byte - Big Endian)
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="offset">The offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUShortBytes(System.UInt16)">
+            <summary>
+            Automatics the authentication short bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Bytes(System.UInt16)">
+            <summary>
+            Short Value (int16) to 2 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt16Bytes(System.UInt16[])">
+            <summary>
+            Short Values (int16) to 2*length Bytes (Big Endian)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32Bytes(System.UInt32)">
+            <summary>
+            uint Value (uint32) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToUInt32Bytes(System.UInt32[])">
+            <summary>
+            To the uint32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToIntBytes(System.Int32)">
+            <summary>
+            Short Value (int32) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32Bytes(System.Int32)">
+            <summary>
+            To the int32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt32Bytes(System.Int32[])">
+            <summary>
+            To the int32 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToInt16Bytes(System.Int16)">
+            <summary>
+            To the int16 bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToFloatBytes(System.Single)">
+            <summary>
+            Short Value (float) to 4 Bytes (Big Endian)
+            </summary>
+            <param name="Value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToDoubleBytes(System.Double)">
+            <summary>
+            Short Value (double) to 8 Bytes (Big Endian)
+            </summary>
+            <param name="Value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanBytes(System.Boolean[])">
+            <summary>
+            To the boolean bytes.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanArray(System.Byte[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanArrayInternal(System.Byte[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanArray(System.UInt16[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanArray(System.Int32[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.LittleEndian.ToBooleanArray(System.UInt32[])">
+            <summary>
+            To the boolean array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMBaseDefines">
+            <summary>
+            Common defines for the assembly
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Base.XAMBaseDefines.DateTimeFormats">
+            <summary>
+            The standard date format 
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.DictionaryExtension">
+            <summary>
+            Extension for a dictionary for easy get or add values.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.DictionaryExtension.GetOrAddValue``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            Get or add a value from or to a dictionary. (For classes with default constructor.)
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.DictionaryExtension.GetOrAddValue``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+            Get or add a value from or to a dictionary. (For classes with no default constructor.)
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="key"></param>
+            <param name="generator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.IEnumerableExtensions">
+            <summary>
+            Helpfull extension for IEnumarables
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsEqualTo``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is equal to the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsEqualTo``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is equal to the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="predicate">A function to test each element.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsGreaterThan``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is grater than the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsGreaterThan``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is grater than the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="predicate">A function to test each element.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsLessThan``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is less than the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.CountIsLessThan``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Int32)">
+            <summary>
+            Counts the elements and compare if the number of elements is less than the count.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="predicate">A function to test each element.</param>
+            <param name="count">Counter for comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.SequenceEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Sequences the equal.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first">The first.</param>
+            <param name="secound">The secound.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.SequenceEqual(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Sequences the equal.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="secound">The secound.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.IEnumerableExtensions.SequenceEqual(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Double)">
+            <summary>
+            Sequences the equal.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="secound">The secound.</param>
+            <param name="deadband">The deadband.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.IpValidator">
+            <summary>
+            IP-Address validator
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.IpValidator.IsValidIP(System.String)">
+            <summary>
+            Validates an IPv4 address
+            </summary>
+            <param name="addr">IP address to validate</param>
+            <returns>true if IP address is valid</returns>
+        </member>
+        <member name="T:XAMCommon.Base.CachedValue`1">
+            <summary>
+            Class to cache one value. The lease time an the load function can be set.
+            </summary>
+            <typeparam name="TItem">Type of the cached value.</typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`1.#ctor(System.TimeSpan,System.Func{`0})">
+            <summary>
+            Create a cached value
+            </summary>
+            <param name="leaseTime">The lease time for the cache.</param>
+            <param name="load">The load function.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`1.GetValue">
+            <summary>
+            Gets the cached value. Loads the value if the lease time has expried.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`1.GetValueAsync">
+            <summary>
+            Gets the cached value. The load function is called asynchron.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.CachedValue`2">
+            <summary>
+            Class to cache one value. The lease time an the load function can be set.
+            </summary>
+            <typeparam name="TItem">The type of the value.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`2.#ctor(System.TimeSpan,System.Func{`1,`0})">
+            <summary>
+            Create a cached value
+            </summary>
+            <param name="leaseTime">The lease time for the cache.</param>
+            <param name="load">The load function.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`2.GetValue(`1)">
+            <summary>
+            Gets the cached value. Loads the value if the lease time has expried.
+            </summary>
+            <param name="key">The key for the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.CachedValue`2.GetValueAsync(`1)">
+            <summary>
+            Gets the cached value. The load function is called asynchron.
+            </summary>
+            <param name="key">The key for the value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.Md5HashBuilder">
+            <summary>
+            Helper class for creating MD5 hash as a hex string
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHash(System.String)">
+            <summary>
+            Creates a MD5 hash from a string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHash(System.String,System.Boolean)">
+            <summary>
+            Creates a MD5 hash from a string
+            </summary>
+            <param name="str">The string</param>
+            <param name="upperCase">Generate uppercase hash string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHashFromFile(System.String)">
+            <summary>
+            Create a MD5 hash from a file.
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHashFromFile(System.String,System.Boolean)">
+            <summary>
+            Create a MD5 hash from a file.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="upperCase">Generate uppercase hash string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHashFromStream(System.IO.Stream)">
+            <summary>
+            Create a MD5 hash from a stram.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Md5HashBuilder.CreateHashFromStream(System.IO.Stream,System.Boolean)">
+            <summary>
+            Create a MD5 hash from a stram.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="upperCase">Generate uppercase hash string.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.CodeBuilder">
+            <summary>
+            Code builder class
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.#ctor">
+            <summary>
+            Creates a code builder
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.#ctor(System.Text.StringBuilder)">
+            <summary>
+            Creates a code builder with extern StringBuilder
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="P:XAMCommon.Base.CodeBuilder.Builder">
+            <summary>
+            Gets the internal StringBuilder
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.Append(System.String)">
+            <summary>
+            Append a string to the code
+            </summary>
+            <param name="str">The string to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.Append(System.String[])">
+            <summary>
+            Append strings to the code
+            </summary>
+            <param name="parts">The strings to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.Append(System.Int32,System.String)">
+            <summary>
+            Append a string with indents (tab) to the code
+            </summary>
+            <param name="indent">The number of indents.</param>
+            <param name="str">The string to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.Append(System.Int32,System.String[])">
+            <summary>
+            Append strings with indents (tab) to the code
+            </summary>
+            <param name="indent">The number of indents.</param>
+            <param name="parts">The strings to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendLine(System.String)">
+            <summary>
+            Append a string with a new line to the code.
+            </summary>
+            <param name="str">The string to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendLine(System.String[])">
+            <summary>
+            Append strings with a new line to the code.
+            </summary>
+            <param name="parts">The strings to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendLine(System.Int32,System.String)">
+            <summary>
+            Append a string with indents (tabs) and a new line to the code.
+            </summary>
+            <param name="indent">The number of indents.</param>
+            <param name="str">The strins to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendLine(System.Int32,System.String[])">
+            <summary>
+            Append strings with indents (tabs) and a new line to the code.
+            </summary>
+            <param name="indent">The number of indents.</param>
+            <param name="parts">The strings to append.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendIndent(System.Int32)">
+            <summary>
+            Append indents (tabs) to the code.
+            </summary>
+            <param name="indent">The number of indents.</param>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.AppendNewLine">
+            <summary>
+            Append a new line to the code.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.CodeBuilder.ToString">
+            <summary>
+            Returns the code as string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.TypeExtension">
+            <summary>
+            Helper class for getting detail information of a type.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.TypeExtension.InheritsFrom(System.Type,System.Type)">
+            <summary>
+            Checks if a type inerherits form a basetype.
+            </summary>
+            <param name="type"></param>
+            <param name="baseType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.TypeExtension.GetParentTypes(System.Type)">
+            <summary>
+            Get all parent types include basetypes and interfaces.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.RingArray`1">
+            <summary>
+            Generic Ring Array
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.#ctor(System.Int32)">
+            <summary>
+            Creates a ring array with the capacity
+            </summary>
+            <param name="capacity"></param>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.Add(`0)">
+            <summary>
+            Adds one element in the array
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.Clear">
+            <summary>
+            Clears the array
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.Resize(System.Int32)">
+            <summary>
+            Resize the array
+            </summary>
+            <param name="newSize"></param>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.GetEnumerator">
+            <summary>
+            Gets the enumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XAMCommon.Base.RingArray`1.Count">
+            <summary>
+            Gets the Count of the array
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.RingArray`1.Capacity">
+            <summary>
+            Gets the capacity of the array
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.RingArray`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element with the index of the array
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.IndexOf(`0)">
+            <summary>
+            Gets the index of the element
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.Contains(`0)">
+            <summary>
+            Gets if the item contains in the array
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.RingArray`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the array to the ring array with the start index
+            </summary>
+            <param name="target"></param>
+            <param name="targetIndex"></param>
+        </member>
+        <member name="T:XAMCommon.Base.TimeProvider">
+            <summary>
+            Time Provider to get the actual time. Class is usefull to get code under test.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.TimeProvider.Current">
+            <summary>
+            Gets the current TimeProvider
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="P:XAMCommon.Base.TimeProvider.Now">
+            <summary>
+            Gets the actual time from the TimeProvider.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.TimeProvider.UtcNow">
+            <summary>
+            Gets the actual UTC time from the TimeProvider.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.TimeProvider.ResetToDefault">
+            <summary>
+            Reset the TimeProvider the the DefaultTimeProvider
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.DefaultTimeProvider">
+            <summary>
+            The DefaultTimeProvider. Gets the Time from DateTime.Now / DateTime.UtcNow.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.DefaultTimeProvider.Now">
+            <summary>
+            Gets the actual time. (DateTime.Now)
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.DefaultTimeProvider.UtcNow">
+            <summary>
+            Gets the actual UTC time. (DateTime.UtcNow)
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.TreeItem">
+            <summary>
+            Data container to add items in a hierarchical order
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.TreeItem.#ctor">
+            <summary>
+            Creates a new TreeItem with no parent
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.TreeItem.#ctor(XAMCommon.Base.TreeItem)">
+            <summary>
+            Creates a new TreeItem with a parent.
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="P:XAMCommon.Base.TreeItem.Children">
+            <summary>
+            Gets the children.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.TreeItem.Parent">
+            <summary>
+            Gets the parent.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.TreeNode`1">
+            <summary>
+            Generic Container to add items in a hierarchical order
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.TreeNode`1.#ctor(`0)">
+            <summary>
+            Creates a TreeNodeItem with a node and no parent.
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:XAMCommon.Base.TreeNode`1.#ctor(XAMCommon.Base.TreeItem,`0)">
+            <summary>
+            Creates a TreeNodeItem with a node and a parent.
+            </summary>
+            <param name="parent"></param>
+            <param name="node"></param>
+        </member>
+        <member name="P:XAMCommon.Base.TreeNode`1.Node">
+            <summary>
+            Gets the node.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.ITree`1">
+            <summary>
+            Interface to be implemented by a data structure
+            which allows adding values associated with <b>string</b> keys.
+            The interface allows retrieveal of multiple values
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.ITree`1.Retrieve(System.String)">
+            <summary>
+            Retrieves the elements from specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.ITree`1.Contains(System.String)">
+            <summary>
+            Determines whether the Tree contains an element with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.ITree`1.StartsWith(System.String)">
+            <summary>
+            Determines whether the tree contains an element wich starts with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.ITree`1.Add(System.String,`0)">
+            <summary>
+            Adds an entry to the Tree.
+            </summary>
+            <param name="key">The key of the element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.SingleValueTree`1">
+            <summary>
+            Class implements a hierarchical lookup dictionary. Each node can have only one single value.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.#ctor">
+            <summary>
+            Creates a hierarchical lookup dictionary (separator is a '.')
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.#ctor(System.Char)">
+            <summary>
+             Creates a hierarchical lookup dictionary whith the given separator.
+            </summary>
+            <param name="separator">The separator for the key.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.Retrieve(System.String)">
+            <summary>
+            Retrieves the elements from specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.Contains(System.String)">
+            <summary>
+            Determines whether the Tree contains an element with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.StartsWith(System.String)">
+            <summary>
+            Determines whether the Tree starts with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTree`1.Add(System.String,`0)">
+            <summary>
+            Adds an entry to the Tree.
+            </summary>
+            <param name="key">The key string.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.SingleValueTreeNode`1">
+            <summary>
+            Generic class for TreeNode with a single value per node
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.#ctor">
+            <summary>
+            Creates a SingleTrieNode
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.SingleValueTreeNode`1.KeyLength">
+            <summary>
+            Gets the length of the key
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.SingleValueTreeNode`1.IsFilled">
+            <summary>
+            Gets if the node has data
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.Children">
+            <summary>
+            Gets the children
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.Values">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.GetOrCreateChild(System.String)">
+            <summary>
+            Gets or create a child
+            </summary>
+            <param name="key">The key value</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.GetChildOrNull(System.String[],System.Int32)">
+            <summary>
+            Gets the child or null if not exists.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.ContainsChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether the element contains in the children.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.StartsWithChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether an element starts with the query.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.AddValue(`0)">
+            <summary>
+            Adds one value to the node. If value exists already it throws an ArgumentException
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.SingleValueTreeNode`1.Clear">
+            <summary>
+            Clear all elements in the node.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.Tree`1">
+            <summary>
+            Class implements a hierarchical lookup dictionary. Each node can habe multible values.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.#ctor">
+            <summary>
+            Creates a hierarchical lookup list (separator is a '.')
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.#ctor(System.Char)">
+            <summary>
+             Creates a hierarchical lookup list whith the given separator.
+            </summary>
+            <param name="separator">The separator for the key.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.Retrieve(System.String)">
+            <summary>
+            Retrieves the elements from specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.Contains(System.String)">
+            <summary>
+            Determines whether the Tree contains an element with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.StartsWith(System.String)">
+            <summary>
+            Determines whether the Tree starts with the specified query.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.Add(System.String,`0)">
+            <summary>
+            Adds an entry to the Tree.
+            </summary>
+            <param name="key">The key string.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.Tree`1.AddRange(System.String,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the values to the Tree.
+            </summary>
+            <param name="key">The key string.</param>
+            <param name="values">The values</param>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.TreeNode`1">
+            <summary>
+            Generic class for TreeNode
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.#ctor">
+            <summary>
+            Creates a TreeNode
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.TreeNode`1.KeyLength">
+            <summary>
+            Gets the length of the key
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.TreeNode`1.IsFilled">
+            <summary>
+            Gets if the node has data
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.Children">
+            <summary>
+            Gets the children
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.Values">
+            <summary>
+            Gets the values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.GetOrCreateChild(System.String)">
+            <summary>
+            Gets or create a child
+            </summary>
+            <param name="key">The key value</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.GetChildOrNull(System.String[],System.Int32)">
+            <summary>
+            Gets the child or null if not exists.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.ContainsChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether the element contains in the children.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.StartsWithChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether an element starts with the query.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.AddValue(`0)">
+            <summary>
+            Adds one value to the node.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNode`1.Clear">
+            <summary>
+            Clear all elements in the node.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.Tree.TreeNodeBase`1">
+            <summary>
+            Base class for Tree Node
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.TreeNodeBase`1.KeyLength">
+            <summary>
+            Gets the length of the key.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.Tree.TreeNodeBase`1.IsFilled">
+            <summary>
+            Gets if the node has data.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Values">
+            <summary>
+            Gets the values.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.GetChildOrNull(System.String[],System.Int32)">
+            <summary>
+            Gets child or null if not exists.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.ContainsChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether the node or sub node contains an element with the specified query array.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.StartsWithChild(System.String[],System.Int32)">
+            <summary>
+            Determines whether the tree starts with the specified query array.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Clear">
+            <summary>
+            Clear all elements in this node.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Add(System.String[],System.Int32,`0)">
+            <summary>
+            Add one element to the node.
+            </summary>
+            <param name="key"></param>
+            <param name="position"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.AddValue(`0)">
+            <summary>
+            Add a value to the node.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.GetOrCreateChild(System.String)">
+            <summary>
+            Gets or creates a child node.
+            </summary>
+            <param name="key">The key of the node.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Contains(System.String[],System.Int32)">
+            <summary>
+            Gets if the element contains in the node or child nodes.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query string array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.StartsWith(System.String[],System.Int32)">
+            <summary>
+            Gets if the element tree starts with the node or the child nodes.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.RetrieveAll">
+            <summary>
+            Retrieves all elements from this node and from all child nodes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Retrieve(System.String[],System.Int32)">
+            <summary>
+            Retrieves all elements from the given query.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query string array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.SearchDeep(System.String[],System.Int32)">
+            <summary>
+            Serach all elements from the given query array in this and all sub nodes.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query string array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.ContainsDeep(System.String[],System.Int32)">
+            <summary>
+            Determines whether the sub node contains an element with the specified query array.
+            </summary>
+            <param name="query">The query string array.</param>
+            <param name="position">The position in the query string array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.StartsWithDeep(System.String[],System.Int32)">
+            <summary>
+            Gets if the sub node contains an element that starts with the specified query array.
+            </summary>
+            <param name="query"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.Subtree">
+            <summary>
+            Gets all values of the sub nodes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.Tree.TreeNodeBase`1.EndOfArray(System.Int32,System.String[])">
+            <summary>
+            Gets it the position is on the end of the array.
+            </summary>
+            <param name="position"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMNameValuePair">
+            <summary>
+            Defines a namme/value pair can be set or received
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMNameValuePair.#ctor">
+            <summary>
+            Create a empty name/value pair
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMNameValuePair.#ctor(System.String,System.String)">
+            <summary>
+            Creates a name/value pair
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:XAMCommon.Base.XAMNameValuePair.Name">
+            <summary>
+            The Name
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Base.XAMNameValuePair.Value">
+            <summary>
+            The Value
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Base.StringExtension">
+            <summary>
+            Usefull extension for String.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.ContainsCaseInsensitive(System.String,System.String)">
+            <summary>
+            Case insensitive contains
+            </summary>
+            <param name="source">Source string</param>
+            <param name="match">Matching string</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LeftBlock(System.String,System.Char)">
+            <summary>
+            Get the left padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LeftBlock(System.String,System.String)">
+            <summary>
+             Get the left padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LeftBlock(System.String,System.Char,System.Int32)">
+            <summary>
+            Get the left padding string of the string.
+            </summary>
+            <param name="source">the source string</param>
+            <param name="search">search character</param>
+            <param name="occur">number of occurs</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastLeftBlock(System.String,System.Char)">
+            <summary>
+            Get the last left padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastLeftBlock(System.String,System.String)">
+            <summary>
+            Get the last left padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastLeftBlock(System.String,System.Char,System.Int32)">
+            <summary>
+            Get the left padding string of the string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <param name="occur"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.RightBlock(System.String,System.Char)">
+            <summary>
+            Get the right padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.RightBlock(System.String,System.String)">
+            <summary>
+            Get the right padding string of the search string.
+            </summary>
+            <param name="source"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.RightBlock(System.String,System.Char,System.Int32)">
+            <summary>
+            Gets the right padding string of the search character. Occur sets the number of occurance of the search character.
+            </summary>
+            <param name="source">The current string</param>
+            <param name="search">The search character</param>
+            <param name="occur">The number of occurance of the serach character.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastRightBlock(System.String,System.Char)">
+            <summary>
+            Get the last right padding string of the search string.
+            </summary>
+            <param name="source">The current string</param>
+            <param name="search">The search character</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastRightBlock(System.String,System.String)">
+            <summary>
+            Get the last right padding string of the search string.
+            </summary>
+            <param name="source">The current string</param>
+            <param name="search">The search string</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.LastRightBlock(System.String,System.Char,System.Int32)">
+            <summary>
+            Get the last right padding string of the search string.
+            </summary>
+            <param name="source">source string</param>
+            <param name="search">search character</param>
+            <param name="occur">number of occur of search character</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.ToBytes(System.String)">
+            <summary>
+            Automatics the bytes.
+            </summary>
+            <param name="s">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.ToBytes(System.String,System.Text.Encoding)">
+            <summary>
+            Automatics the bytes.
+            </summary>
+            <param name="s">The arguments.</param>
+            <param name="encoding">The encoding.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.HexStringToBytes(System.String)">
+            <summary>
+            Hexadecimals the string to bytes.
+            </summary>
+            <param name="s">The s.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.GetBetween(System.String,System.Char,System.Char)">
+            <summary>
+            Gets the between.
+            </summary>
+            <param name="s">The s.</param>
+            <param name="begin">The begin.</param>
+            <param name="end">The end.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.GetOrDefault(System.Collections.Generic.IList{System.String},System.Int32,System.String)">
+            <summary>
+            Gets the or default.
+            </summary>
+            <param name="list">The list.</param>
+            <param name="index">The index.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.EqualsIgnoreWhitespace(System.String,System.String)">
+            <summary>
+            Equalses the ignore whitespace.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The secound.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.StringExtension.DeleteLines(System.String,System.Int32)">
+            <summary>
+            Deletes the lines.
+            </summary>
+            <param name="s">The s.</param>
+            <param name="linesToRemove">The lines to remove.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMCompare">
+            <summary>
+            XAMControl Compare functions
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Base.XAMCompare.DefaultEpsilon">
+            <summary>
+            Default Epsilon for compare float or double values
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Single,System.Single)">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Single,System.Single,System.Single)">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Single,System.Single,System.Nullable{System.Single})">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Double,System.Double)">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Double,System.Double,System.Double)">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.IsEqual(System.Double,System.Double,System.Nullable{System.Double})">
+            <summary>
+            Equalses the specified first.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.HasChangedAndStore``1(``0,System.Object@)">
+            <summary>
+            Checks if the value has changed. If it has changed it stored the value to the old value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="oldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.HasChangedAndStore``1(``0,``0@)">
+            <summary>
+            Checks if the value has changed. If it has changed it stored the value to the old value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="oldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Single[],System.Single[])">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Single[],System.Single[],System.Single)">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Single[],System.Single[],System.Nullable{System.Single})">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Double[],System.Double[])">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Double[],System.Double[],System.Double)">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual(System.Double[],System.Double[],System.Nullable{System.Double})">
+            <summary>
+            Arrayses the equal.
+            </summary>
+            <param name="a1">The a1.</param>
+            <param name="a2">The a2.</param>
+            <param name="epsilon">The epsilon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayIsEqual``1(``0[],``0[])">
+            <summary>
+            see if array elements are equal
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="a1"></param>
+            <param name="a2"></param>
+            <returns>true if equal</returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore``1(``0[],System.Object@)">
+            <summary>
+            Checks if the array has changed. If it has changed store the value to the old value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore``1(``0[],``0[]@)">
+            <summary>
+            Checks if the array has changed. If it has changed store the value to the old value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore(System.Single[],System.Object@,System.Nullable{System.Single})">
+            <summary>
+            Checks if the float array has changed. If it has changed store the value to the old value.
+            </summary>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <param name="epsilon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore(System.Single[],System.Single[]@,System.Nullable{System.Single})">
+            <summary>
+            Checks if the float array has changed. If it has changed store the value to the old value.
+            </summary>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <param name="epsilon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore(System.Double[],System.Object@,System.Nullable{System.Double})">
+            <summary>
+            Checks if the float array has changed. If it has changed store the value to the old value.
+            </summary>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <param name="epsilon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.ArrayHasChangedAndStore(System.Double[],System.Double[]@,System.Nullable{System.Double})">
+            <summary>
+            Checks if the float array has changed. If it has changed store the value to the old value.
+            </summary>
+            <param name="a1"></param>
+            <param name="oldValue"></param>
+            <param name="epsilon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMCompare.Equals(System.Object,System.Object)">
+            <summary>
+            Hide Equals
+            </summary>
+            <param name="obj"></param>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMBoolArrayConverter">
+            <summary>
+            Converts a bool array in differend formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMBoolArrayConverter.ToString(System.Boolean[],System.String)">
+            <summary>
+            Converts a bool array to a string with the given separator
+            </summary>
+            <param name="value">The value to convert</param>
+            <param name="separator">The separator. (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMBoolArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with the separator to a bool array.
+            </summary>
+            <param name="value">The string to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMBoolArrayConverter.StringArrayToArray(System.String[],System.Boolean[]@)">
+            <summary>
+            Converts a string array to a referenced bool array. 
+            </summary>
+            <param name="values">The string array.</param>
+            <param name="target">The target bool array.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMBoolArrayConverter.ToByteArray(System.Boolean[])">
+            <summary>
+            Converts a bool array to a coded byte array.
+            </summary>
+            <param name="value">The byte array to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMByteArrayConverter">
+            <summary>
+            Convers a byte array in differend formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMByteArrayConverter.ToString(System.Byte[],System.String)">
+            <summary>
+            Converts a byte array to an string separated with the separator
+            </summary>
+            <param name="value">The array to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMByteArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with the separator to a byte array.
+            </summary>
+            <param name="value">The string to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMByteArrayConverter.StringArrayToArray(System.String[],System.Byte[]@)">
+            <summary>
+            Converts a string array to an referenced byte array.
+            </summary>
+            <param name="values">The array to convert.</param>
+            <param name="target">The target byte array.</param>
+        </member>
+        <member name="T:XAMCommon.Base.XAMDoubleArrayConverter">
+            <summary>
+            Convers a double array in differend formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMDoubleArrayConverter.ToString(System.Double[],System.String)">
+            <summary>
+            Converts a double array to an string separated with the separator
+            </summary>
+            <param name="value">The array to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMDoubleArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with the separator to an double array.
+            </summary>
+            <param name="value">The string to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMDoubleArrayConverter.StringArrayToArray(System.String[],System.Double[]@)">
+            <summary>
+            Converts a string array to an referenced double array.
+            </summary>
+            <param name="values">The array to convert.</param>
+            <param name="target">The target double array.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMDoubleArrayConverter.ToByteArray(System.Double[])">
+            <summary>
+            Converts a double array to a blocked double byte array.
+            </summary>
+            <param name="value">The array to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMIntArrayConverter">
+            <summary>
+            Converts an int array in different formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMIntArrayConverter.ToString(System.Int32[],System.String)">
+            <summary>
+            Converts an int array to a string separted with the separator.
+            </summary>
+            <param name="value">The array to convert.</param>
+            <param name="separator">The separator. (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMIntArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with a separator to an int array.
+            </summary>
+            <param name="value">The string value to convert.</param>
+            <param name="separator">The separator. (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMIntArrayConverter.StringArrayToArray(System.String[],System.Int32[]@)">
+            <summary>
+            Converts a string array to a referenced int array. 
+            </summary>
+            <param name="values">The values to convert.</param>
+            <param name="target">The target int array.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMIntArrayConverter.ToByteArray(System.Int32[])">
+            <summary>
+            Converts an int array to a binary coded byte array.
+            </summary>
+            <param name="value">The array to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMRealArrayConverter">
+            <summary>
+            Converts a real array in different formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMRealArrayConverter.ToString(System.Single[],System.Char)">
+            <summary>
+            Converts a float array to an string with the given separator.
+            </summary>
+            <param name="value">The array to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMRealArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with the separator to an float array.
+            </summary>
+            <param name="value">The string value to convert.</param>
+            <param name="separator">The separtor. (defualt is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMRealArrayConverter.StringArrayToArray(System.String[],System.Single[]@)">
+            <summary>
+            Convert a string array to a referenced float array.
+            </summary>
+            <param name="values">The array to convert</param>
+            <param name="target">The target float array.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMRealArrayConverter.ToByteArray(System.Single[])">
+            <summary>
+            Converts a float array to a float block byte array.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMStringArrayConverter">
+            <summary>
+            Converts a string array in different formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMStringArrayConverter.ToString(System.String[],System.String)">
+            <summary>
+            Converts a string array to an string separated with the separator
+            </summary>
+            <param name="value">The array to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMStringArrayConverter.StringToArray(System.String,System.String)">
+            <summary>
+            Converts a string separated with the separator to an string array.
+            </summary>
+            <param name="value">The string to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMStringArrayConverter.StringArrayToArray(System.String[],System.String[]@)">
+            <summary>
+            Converts a string array to an referenced string array.
+            </summary>
+            <param name="values">The array to convert.</param>
+            <param name="target">The target string array.</param>
+        </member>
+        <member name="T:XAMCommon.Base.XAMTypeConverter">
+            <summary>
+            Converts values into other types.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToByteArray(System.String)">
+            <summary>
+            Decode a string to a byte array.
+            </summary>
+            <param name="value">The string value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToByteArray(System.TimeSpan)">
+            <summary>
+            Decode a TimeSpan to a byte array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToByteArray(System.DateTime)">
+            <summary>
+            Decode a DateTime value to a byte array.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToByteArray(System.String[])">
+            <summary>
+            Decocde a string array to a byte array. Each string is separated with a tab.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.TimeSpan)">
+            <summary>
+            Converts a TimeSpan value to a string.
+            </summary>
+            <param name="value">The value</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.DateTime)">
+            <summary>
+            Converts a DateTime value to a string. (with the default date/time format)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Boolean[])">
+            <summary>
+            Converts a bool array to a string. (separator is ;)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Byte[])">
+            <summary>
+            Converts a byte array to a string. (separator is ;)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Int32[])">
+            <summary>
+            Converts an int array to a string. (separator is ;)
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.UInt32[])">
+            <summary>
+            Converts an unsigned int array to a string. (separator is ;)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Single[])">
+            <summary>
+            Converts a float value to a string. (separator is ;)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Double[])">
+            <summary>
+            Converts a double array to a string. (separator is ;)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.String[])">
+            <summary>
+            Converts a string array to a string. (separator is ;)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToString(System.Byte[],System.String@)">
+            <summary>
+            Decode a string value from a decodes byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToTimeSpan(System.Byte[],System.TimeSpan@)">
+            <summary>
+            Decode a TimeSpan value from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToDateTime(System.Byte[],System.DateTime@)">
+            <summary>
+            Decode a DateTime value from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToBoolArray(System.Byte[],System.Boolean[]@)">
+            <summary>
+            Decode a byte array value from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToIntArray(System.Byte[],System.Int32[]@)">
+            <summary>
+            Decode a int array from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToUIntArray(System.Byte[],System.UInt32[]@)">
+            <summary>
+            Decode a unsigned int array from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToFloatArray(System.Byte[],System.Single[]@)">
+            <summary>
+            Decode a float array from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToDoubleArray(System.Byte[],System.Double[]@)">
+            <summary>
+            Decode a double array from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.ToStringArray(System.Byte[],System.String[]@)">
+            <summary>
+            Decode a string array from a decoded byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedTimeSpanToString(System.Byte[])">
+            <summary>
+            Decode a TimeSpan value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedDateTimeToString(System.Byte[])">
+            <summary>
+            Decode a DateTime value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedStringToString(System.Byte[])">
+            <summary>
+            Decode a string value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedBoolArrayToString(System.Byte[])">
+            <summary>
+            Decode a bool array value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedIntArrayToString(System.Byte[])">
+            <summary>
+            Decode a int array value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedFloatArrayToString(System.Byte[])">
+            <summary>
+            Decode a float array value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedDoubleArrayToString(System.Byte[])">
+            <summary>
+            Decode a double array value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMTypeConverter.CodedStringArrayToString(System.Byte[])">
+            <summary>
+            Decode a string array value from a decoded byte array. And returns the string of the value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XAMUIntArrayConverter">
+            <summary>
+            Converts an unsigned int array in different formats.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XAMUIntArrayConverter.ToString(System.UInt32[],System.Char)">
+            <summary>
+            Converts an uint array to a string with the given separator.
+            </summary>
+            <param name="value">The array to convert</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMUIntArrayConverter.StringToArray(System.String,System.Char)">
+            <summary>
+            Converts a string separated with the separator to an uint array.
+            </summary>
+            <param name="value">The string to convert.</param>
+            <param name="separator">The separator (default is ;)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XAMUIntArrayConverter.StringArrayToArray(System.String[],System.UInt32[]@)">
+            <summary>
+            Converts a string array to a referenced uint array.
+            </summary>
+            <param name="values">The array to convert.</param>
+            <param name="target">The target uint array.</param>
+        </member>
+        <member name="M:XAMCommon.Base.XAMUIntArrayConverter.ToByteArray(System.UInt32[])">
+            <summary>
+            Converts a uint array to a binary coded byte array.
+            </summary>
+            <param name="value">The array to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Base.XmlEscaper">
+            <summary>
+            XML-Escaper
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Base.XmlEscaper.EscapeSpecialSignsWithoutVowels(System.String)">
+            <summary>
+            Escape a XML-String without mutated vowels
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XmlEscaper.EscapeSpecialSigns(System.String)">
+            <summary>
+            Escape a XML-String with mutated vowels
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Base.XmlEscaper.UnescapeSpecialSigns(System.String)">
+            <summary>
+            Unescape an XML-String
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

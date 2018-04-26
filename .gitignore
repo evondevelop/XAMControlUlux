@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/~$GitHubVSTemp$~/v15/.suo
+
+/.vs/XAMControlUlux/v15
+/Ulux/XAMUmp/obj
+*.vspscc
+/XAMUmpClient/obj

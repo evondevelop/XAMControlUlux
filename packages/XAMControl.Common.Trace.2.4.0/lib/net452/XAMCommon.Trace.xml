@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAMCommon.Trace</name>
+    </assembly>
+    <members>
+        <member name="T:XAMCommon.Trace.DebugLevel">
+            <summary>
+            debug level
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.DebugLevel.Low">
+            <summary>
+            Low
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.DebugLevel.Warning">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.DebugLevel.High">
+            <summary>
+            High
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.DebugLevel.Debug">
+            <summary>
+            Debug
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Trace.Listeners.ColoredConsoleTraceListener">
+            <summary>
+            a custom console trace listener with line coloring
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.ColoredConsoleTraceListener.#ctor(System.Boolean)">
+            <summary>
+            use ErrorStream to write tracing and debugging output to the standard output stream.
+            </summary>
+            <param name="useErrorStream"></param>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.ColoredConsoleTraceListener.#ctor">
+            <summary>
+            Creates a ColoredConsoleTraceListener
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.ColoredConsoleTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)">
+            <summary>
+            Traces The Event to the listener
+            </summary>
+            <param name="eventCache"></param>
+            <param name="source"></param>
+            <param name="eventType"></param>
+            <param name="id"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.ColoredConsoleTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])">
+            <summary>
+            Taces the event to the consolelistener
+            use all params args for generating string message
+            </summary>
+            <param name="eventCache"></param>
+            <param name="source"></param>
+            <param name="eventType"></param>
+            <param name="id"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+            just add objects which can be converted to strings
+        </member>
+        <member name="T:XAMCommon.Trace.Listeners.XAMTextWriterListener">
+            <summary>
+            TextWriterListener for Texttracing with XAMTrace.Tracer
+            Additional Textwriter because of the parameter of the TraceSource Event
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.XAMTextWriterListener.#ctor(System.String)">
+            <summary>
+            Give the specified Filename to the TextWriter
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:XAMCommon.Trace.Listeners.XAMTextWriterListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])">
+            <summary>
+            Write to the Textfile Writer configured in appConfig
+            </summary>
+            <param name="eventCache"></param>
+            <param name="source"></param>
+            <param name="eventType"></param>
+            <param name="id"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:XAMCommon.Trace.TraceDelegate">
+            <summary>
+            callback to send a trace message
+            </summary>
+            <param name="message">The message.</param>
+            <param name="prio">The proprity.</param>
+        </member>
+        <member name="T:XAMCommon.Trace.ModuleTraceDelegate">
+            <summary>
+            Delegate to trace a message with a module name.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="message">The message.</param>
+            <param name="prio">The priority.</param>
+        </member>
+        <member name="T:XAMCommon.Trace.TracePrio">
+            <summary>
+            Trace priority
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.MESSAGE">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.WARNING">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.ERROR">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.FATALERROR">
+            <summary>
+            Fatal Error
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.NOTIFICATION">
+            <summary>
+            Notification
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Trace.TracePrio.DEBUG">
+            <summary>
+            Debug
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Trace.XAMPriorityConverter">
+            <summary>
+            Convert XAMPriorities to standard .NET priorites
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMPriorityConverter.GetTraceEventPrio(XAMCommon.Trace.TracePrio)">
+            <summary>
+            Get standard .NET priorities from XAMTrace priorities
+            </summary>
+            <param name="prio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMPriorityConverter.GetXAMTracePrioFromTracePrio(System.Diagnostics.TraceEventType)">
+            <summary>
+            Get XAMTrace Prios from standard .NET priorities
+            </summary>
+            <param name="prio"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Trace.TraceUtilities">
+            <summary>
+            Trace helper utilities
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.TraceUtilities.GetExceptionMessages(System.Exception,System.Int32)">
+            <summary>
+            Creates a string from the exception and inner exception messages to a maximum depth. The string includes the exception type.
+            </summary>
+            <param name="ex">The exception</param>
+            <param name="maxDepth">The maximum depth for evaluating the exception messages</param>
+            <returns>the evaluated messages</returns>
+        </member>
+        <member name="M:XAMCommon.Trace.TraceUtilities.GetExceptionUserMessages(System.Exception,System.Int32)">
+            <summary>
+            Creates a string from the exception and inner exception messages to a maximum depth. The string doesn't include the exception type.
+            </summary>
+            <param name="ex">The exception</param>
+            <param name="maxDepth">The maximum depth for evaluating the exception messages</param>
+            <returns>the evaluated messages</returns>
+        </member>
+        <member name="M:XAMCommon.Trace.TraceUtilities.CreateExceptionMessageString(System.String,System.Exception,System.Int32)">
+            <summary>
+            Create a string out of a message and an exception
+            </summary>
+            <param name="message">The message</param>
+            <param name="ex">The exception</param>
+            <param name="maxDepth">The maximum depth for evaluating the exception messages</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Trace.XAMTraceException">
+            <summary>
+            Special trace exception.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTraceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the System.Exception class with a specified error
+            message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTraceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the System.Exception class with a specified error
+            message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference</param>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTraceException.#ctor">
+            <summary>
+            Initializes a new instance of the XAMTraceException.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTraceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the XAMTraceException.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:XAMCommon.Trace.XAMTracer">
+            <summary>
+            Trace Function for all Projects.
+            For usage add Listeners to TraceSources
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Trace.XAMTracer.Instance">
+            <summary>
+            Singleton Instance to verify that only one object of this class exists(threadsafe)
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTracer.GetTraceSource">
+            <summary>
+            Create a TraceSource in lazy way.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTracer.Trace(System.String,System.String,XAMCommon.Trace.TracePrio)">
+            <summary>
+            Trace message to the TraceSource named by the used process.
+            </summary>
+            <param name="modulename"></param>
+            is a seperation in the message for your traces
+            <param name="message">message you want to trace</param>
+            <param name="prio">priority for the trace</param>
+        </member>
+        <member name="M:XAMCommon.Trace.XAMTracer.Trace(System.String,System.String,System.Exception,XAMCommon.Trace.TracePrio)">
+            <summary>
+            Trace exception with message to the TraceSource named by the used process.
+            </summary>
+            <param name="modulename">is a seperation in the message for your traces</param>
+            <param name="message">message you want to trace</param>
+            <param name="ex">Exception</param>
+            <param name="prio">priority for the trace</param>
+        </member>
+    </members>
+</doc>
