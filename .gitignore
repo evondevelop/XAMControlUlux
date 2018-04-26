@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/XAMControlUlux/v15
+/Ulux/XAMUmp/obj
+*.vspscc
+/XAMUmpClient/obj
