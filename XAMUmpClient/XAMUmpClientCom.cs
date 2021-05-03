@@ -33,7 +33,7 @@ namespace XAMIO.UmpClient
         /// </summary>
         /// <param name="p">process info</param>
         public XAMUmpClientCom(XAMCommon.ServiceReference.XAMIOProcessInfo p, XAMUmpClientConfig config, string conId, XAMUmpDispatcher dispatcher)
-            : base(p, conId, config.XAMServerIP,IOStandbyMode.Mode.Read)
+            : base(null, p, conId, config.XAMServerIP,IOStandbyMode.Mode.Read)
         {
             string[] split = conId.Split(':');
             string destination = split[0];

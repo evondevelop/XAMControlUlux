@@ -23,5 +23,5 @@ This Visual Studio solution includes two projects:
   * including the communication to XAMControl
 
 ### Supported XAMControl Version:
-* 2.5.*
+* 2.7.*
 
