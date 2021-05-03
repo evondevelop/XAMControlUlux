@@ -6,3 +6,8 @@
 /Ulux/XAMUmp/obj
 *.vspscc
 /XAMUmpClient/obj
+/bin/Debug
+/.vs/XAMControlUlux/v16/.suo
+/bin/Release
+packages
+/.vs
