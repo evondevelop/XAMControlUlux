@@ -1,0 +1,2901 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAMIOBase</name>
+    </assembly>
+    <members>
+        <member name="T:XAMIO.Base.ArchiveKey">
+            <summary>
+            Trend Key
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.ArchiveKey.Date">
+            <summary>
+            Gets or sets the date.
+            </summary>
+            <value>
+            The date.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.ArchiveKey.#ctor(System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ArchiveKey"/> class.
+            </summary>
+            <param name="InstanceID">The instance identifier.</param>
+            <param name="PropertyID">The property identifier.</param>
+            <param name="Date">The date.</param>
+        </member>
+        <member name="M:XAMIO.Base.ArchiveKey.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAMIO.Base.ArchiveKey.Equals(XAMIO.Base.ArchiveKey)">
+            <summary>
+            Equalses the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ArchiveKey.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:XAMIO.Base.Archive.IIOArchiveWriter.Enqueue(System.String,System.Double,System.DateTime)">
+            <summary>
+            Enqueues the specified variable name.
+            </summary>
+            <param name="varName">Name of the variable.</param>
+            <param name="value">The value.</param>
+            <param name="timeStamp">The time stamp.</param>
+        </member>
+        <member name="M:XAMIO.Base.Archive.IIOArchiveWriter.EnqueueList(System.Collections.Generic.IEnumerable{XAMIO.Base.XAMValueTimeStampItem})">
+            <summary>
+            Enqueues the list.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMValueTimeStampItem">
+            <summary>
+            XAMValue Timestamp Items
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueTimeStampItem.VarName">
+            <summary>
+            Gets or sets the name of the variable.
+            </summary>
+            <value>
+            The name of the variable.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueTimeStampItem.TimeStamp">
+            <summary>
+            Gets or sets the time stamp.
+            </summary>
+            <value>
+            The time stamp.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueTimeStampItem.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.Extensions.IXAMValueExtensions.GetValueChangedTime(XAMIO.Base.IXAMValue)">
+            <summary>
+            last changed DateTime for this value
+            </summary>
+            <param name="value">The IXAMValue instance</param>
+            <returns>The evaluated DateTime</returns>
+        </member>
+        <member name="M:XAMIO.Base.Extensions.ValueExtensionDataExtensions.GetValueChangedTime(XAMCommon.ServiceReference.ValueExtensionData,System.Object)">
+            <summary>
+            last changed DateTime for this value
+            </summary>
+            <param name="extensionData">The extension data instance</param>
+            <param name="value">The value</param>
+            <returns>The evaluated DateTime</returns>
+        </member>
+        <member name="T:XAMIO.Base.IIOValue">
+            <summary>
+            IOValue Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.MaxIndex">
+            <summary>
+            Highest BitIndex
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.IsReadAccess">
+            <summary>
+            Gets a value indicating whether [is read access].
+            </summary>
+            <value>
+              <c>true</c> if [is read access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.IsWriteAccess">
+            <summary>
+            Gets a value indicating whether [is write access].
+            </summary>
+            <value>
+              <c>true</c> if [is write access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.TimeServer">
+            <summary>
+            Gets the time server.
+            </summary>
+            <value>
+            The time server.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.TimeSource">
+            <summary>
+            Gets the time source.
+            </summary>
+            <value>
+            The time source.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOValue.Quality">
+            <summary>
+            Quality of item
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.IOValueAccessException">
+            <summary>
+            XAMIO Access Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOValueAccessException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOValueAccessException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOValueAccessException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOValueAccessException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOValueAccessException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOValueAccessException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOValueAccessException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOValueAccessException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:XAMIO.Base.IXAMValue">
+            <summary>
+            XAMValue Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Index">
+            <summary>
+            Gets the index of the bit.
+            </summary>
+            <value>
+            The index of the bit.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.LogTimeOff">
+            <summary>
+            Gets the log time off.
+            </summary>
+            <value>
+            The log time off.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.LogTimeOn">
+            <summary>
+            Gets the log time on.
+            </summary>
+            <value>
+            The log time on.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Message">
+            <summary>
+            Sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Quality">
+            <summary>
+            Gets or sets the quality.
+            </summary>
+            <value>
+            The quality.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.TimeServer">
+            <summary>
+            Gets the time server.
+            </summary>
+            <value>
+            The time server.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.TimeSource">
+            <summary>
+            Gets or sets the time source.
+            </summary>
+            <value>
+            The time source.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.IsWriteAccess">
+            <summary>
+            Gets a value indicating whether [is write access].
+            </summary>
+            <value>
+              <c>true</c> if [is write access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.IsReadAccess">
+            <summary>
+            Gets a value indicating whether [is read access].
+            </summary>
+            <value>
+              <c>true</c> if [is read access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.IsControllerOnline">
+            <summary>
+            XAMServer connection is ok
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.IsValueOnline">
+            <summary>
+            XAMControl Property is Online
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.IsServer">
+            <summary>
+            Gets a value indicating whether [is server].
+            </summary>
+            <value>
+              <c>true</c> if [is server]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.DataType">
+            <summary>
+            Gets the type of the data.
+            </summary>
+            <value>
+            The type of the data.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Access">
+            <summary>
+            Gets the access.
+            </summary>
+            <value>
+            The access.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.ComplexPath">
+            <summary>
+            Gets or sets the complex path.
+            </summary>
+            <value>
+            The complex path.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.Trigger">
+            <summary>
+            Get trigger
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IXAMValue.LastTrigger">
+            <summary>
+            Last saved trigger value
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IXAMValue.GetAndResetIsUpdatedFromXAMServer">
+            <summary>
+            get and reset the updated state
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOEnumIndexMode">
+            <summary>
+            XAM IO Enum Index Mode
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOEnumIndexMode.Highest">
+            <summary>
+            The highest
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOEnumIndexMode.Lowest">
+            <summary>
+            The lowest
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOIndexMode">
+            <summary>
+            XAMIO Index Mode
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOIndexMode.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOIndexMode.BitField">
+            <summary>
+            The bit field
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOIndexMode.Array">
+            <summary>
+            The array
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOIndexMode.Enum">
+            <summary>
+            The enum
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOIndexMode.Complex">
+            <summary>
+            The complex
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMValueContainer`1">
+            <summary>
+            XAMValue Container
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="F:XAMIO.Base.XAMValueContainer`1.Access">
+            <summary>
+            The access
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMValueContainer`1.SingleXamvalue">
+            <summary>
+            The single xamvalue
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMValueContainer`1.xamValues">
+            <summary>
+            The xam values
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.ValueReaded">
+            <summary>
+            The value readed
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.HasXAMValues">
+            <summary>
+            Gets a value indicating whether [has xam values].
+            </summary>
+            <value>
+              <c>true</c> if [has xam values]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.AccessMode">
+            <summary>
+            Gets or sets a value indicating whether [ignore access].
+            </summary>
+            <value>
+              <c>true</c> if [ignore access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.IgnoreAccess">
+            <summary>
+            Gets or sets a value indicating whether [ignore access].
+            </summary>
+            <value>
+              <c>true</c> if [ignore access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.MaxIndex">
+            <summary>
+            Highest BitIndex
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.IndexMode">
+            <summary>
+            Gets or sets a value indicating whether [is bit field].
+            </summary>
+            <value>
+              <c>true</c> if [is bit field]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.IsWriteAccess">
+            <summary>
+            Has Property write access
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.IsReadAccess">
+            <summary>
+            Has property read access
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.Quality">
+            <summary>
+            Quality of item
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.TimeServer">
+            <summary>
+            time server
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.TimeSource">
+            <summary>
+            time srouce
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.VarNames">
+            <summary>
+            Gets the variable names.
+            </summary>
+            <value>
+            The variable names.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.XAMValues">
+            <summary>
+            Gets or sets the xam values.
+            </summary>
+            <value>
+            The xam values.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.EnumIndexMode">
+            <summary>
+            Gets or sets the enum index mode.
+            </summary>
+            <value>
+            The enum index mode.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValueContainer`1.GetAndResetHasXAMValuesChanged">
+            <summary>
+            Gets the state of XAMValues changed since last time getting and reset the state
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValueContainer`1"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.GetComplexValue">
+            <summary>
+            Gets the complex value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetComplexValue(System.Object)">
+            <summary>
+            Sets the complex value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.XAMValueAdd(`0)">
+            <summary>
+            Add a new XAMServer Value
+            </summary>
+            <param name="prop"> IXAMValue to add</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.XAMValueRemove(`0)">
+            <summary>
+            remove IXAMValue
+            </summary>
+            <param name="prop">IXAMValue</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.XAMValueRemove(System.String)">
+            <summary>
+            remove IXAMValue
+            </summary>
+            <param name="propName">XAM Variable name</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.GetValueInternal">
+            <summary>
+            Gets the value internal.
+            </summary>
+            <returns></returns>
+            <exception cref="T:XAMIO.Base.IOValueAccessException">
+            can't set value - no write value assigned
+            or
+            can't set value - no write value assigned
+            </exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.GetArrayValue">
+            <summary>
+            Gets the array value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.GetBitFieldValue">
+            <summary>
+            Gets the bit field value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.GetEnumValue">
+            <summary>
+            Gets the enum value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetValueInternal(System.Object)">
+            <summary>
+            Sets the value internal.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetArrayValue(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Sets the array value.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <exception cref="T:System.InvalidOperationException">Array can't be null</exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetEnumValue(System.Object)">
+            <summary>
+            Sets the enum value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetBitFieldValue(System.Object)">
+            <summary>
+            Sets the bit field value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetQualityInternal(XAMCommon.PropertyQuality,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the quality internal.
+            </summary>
+            <param name="Quality">The quality.</param>
+            <param name="Message">The message.</param>
+            <param name="readwrite">if set to <c>true</c> [readwrite].</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueContainer`1.SetQualityInternalAll(XAMCommon.PropertyQuality,System.String)">
+            <summary>
+            Sets the quality internal all.
+            </summary>
+            <param name="Quality">The quality.</param>
+            <param name="Message">The message.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMValueException">
+            <summary>
+            XAMValue Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValueException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValueException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValueException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValueException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValueException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:XAMIO.Base.IOArchiveWriter">
+            <summary>
+            IO Trend Writer
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOArchiveWriter.#ctor(XAMIO.Base.XAMCom.IXAMServerContext,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOArchiveWriter"/> class.
+            </summary>
+            <param name="context"></param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOArchiveWriter.Enqueue(System.String,System.Double,System.DateTime)">
+            <summary>
+            Enqueues the specified variable name.
+            </summary>
+            <param name="varName">Name of the variable.</param>
+            <param name="value">The value.</param>
+            <param name="timeStamp">The time stamp.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOArchiveWriter.EnqueueList(System.Collections.Generic.IEnumerable{XAMIO.Base.XAMValueTimeStampItem})">
+            <summary>
+            Enqueues the list.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOArchiveWriter.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:XAMIO.Base.BypassConnection">
+            <summary>
+            Bypass Connection
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.VariableList">
+            <summary>
+            Gets the variable list.
+            </summary>
+            <value>
+            The variable list.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.BrowserList">
+            <summary>
+            The browser list
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.ConnectionID">
+            <summary>
+            Gets the connection identifier.
+            </summary>
+            <value>
+            The connection identifier.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.InUse">
+            <summary>
+            Gets or sets a value indicating whether [in use].
+            </summary>
+            <value>
+              <c>true</c> if [in use]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.IgnorePLCID">
+            <summary>
+            Gets or sets a value indicating whether [ignore plcid].
+            </summary>
+            <value>
+              <c>true</c> if [ignore plcid]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.VarListUpdatePending">
+            <summary>
+            Gets or sets a value indicating whether [variable list update pending].
+            </summary>
+            <value>
+            <c>true</c> if [variable list update pending]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.ServerContext">
+            <summary>
+            Gets or sets the server context.
+            </summary>
+            <value>
+            The server context.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.HighspeedMode">
+            <summary>
+            Gets or sets the highspeedmode. Attention this will cause higher CPU consumption
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.IsUpdateNeeded">
+            <summary>
+            Determines, if an variable update can be done
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.BypassConnection.Delete">
+            <summary>
+            This connection is not used any more and can be deleted!
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.BypassConnection"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.Enable(System.Int32)">
+            <summary>
+            Enables the specified PLC identifier.
+            </summary>
+            <param name="PlcId">The PLC identifier.</param>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.Disable">
+            <summary>
+            Disables this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.UpdateIOConfig(System.Collections.Generic.List{XAMIO.Base.XAMDriverPropertiesExtended},System.Int32@,System.Int32@)">
+            <summary>
+            Updates the io configuration.
+            </summary>
+            <param name="list">The list.</param>
+            <param name="ValidProperties">The valid properties.</param>
+            <param name="InValidProperties">The in valid properties.</param>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.BypassConnection.SetServerCom(XAMCommon.IXAMPLCCom)">
+            <summary>
+            Sets the server COM.
+            </summary>
+            <param name="XAMComClient">The xam COM client.</param>
+        </member>
+        <member name="T:XAMIO.Base.ObjectOriented.Connection.IoInterfaceComFactory`2">
+            <summary>
+            Just use this class if you want to create your InterfaceCOM by yourself( maybe IOC uses ...)
+            </summary>
+            <typeparam name="TIOInterfaceCom"></typeparam>
+            <typeparam name="TIOItem"></typeparam>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection.CreateInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Create interfaces for the connection
+            </summary>
+            <param name="con"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection.InitializeInstance(System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.OOInterfaceBase"/> class.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection.GetInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Get the interfaces for the connection. if not existing, create them
+            </summary>
+            <param name="con"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection.RemoveInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Remove the interfaces for one connection
+            </summary>
+            <param name="con"></param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection.RemoveClosedConnections(System.Collections.Generic.Dictionary{System.String,XAMIO.Base.XAMConnectionCollection{XAMIO.Base.IIOConnection}})">
+            <summary>
+            Remove the interfaces for unused connections
+            </summary>
+            <param name="connections"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:XAMIO.Base.ObjectOriented.Connection.IOOInterfaceFactory" -->
+        <member name="F:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2._ConnectionInstances">
+            <summary>
+            The saved connection instances
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2.CreateConnectionInstance(System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Create a new connection instance for the instanceName
+            </summary>
+            <param name="instanceName"></param>
+            <param name="trace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2.GetConnectionInstances">
+            <summary>
+            Get the created connection instances
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2.GetConnectionInstance(System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            get a connection instance for instanceName. if none exists, create a new instance.
+            </summary>
+            <param name="instanceName"></param>
+            <param name="trace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2.RemoveConnectionInstance(System.String)">
+            <summary>
+            Remove the connection instance for the instanceName
+            </summary>
+            <param name="instanceName"></param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnectionHandler`2.RemoveInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Remove the interfaces for the connection
+            </summary>
+            <param name="con"></param>
+        </member>
+        <member name="T:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1">
+            <summary>
+            Object Oriented Interface Base
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1.CreateInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Create interfaces for the connection
+            </summary>
+            <param name="con"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1.InitializeInstance(System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.OOInterfaceBase"/> class.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1.GetInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Get the interfaces for the connection. if not existing, create them
+            </summary>
+            <param name="con"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1.RemoveInterfaces(XAMIO.Base.IIOConnection)">
+            <summary>
+            Remove the interfaces for one connection
+            </summary>
+            <param name="con"></param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.Connection.OOInterfaceConnection`1.RemoveClosedConnections(System.Collections.Generic.Dictionary{System.String,XAMIO.Base.XAMConnectionCollection{XAMIO.Base.IIOConnection}})">
+            <summary>
+            Remove the interfaces for unused connections
+            </summary>
+            <param name="connections"></param>
+        </member>
+        <member name="T:XAMIO.Base.ObjectOriented.ObjectOrientedIOItem">
+            <summary>
+            Object Oriented IO Item
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.ObjectOriented.ObjectOrientedIOItem.Identifier">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.ObjectOrientedIOItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.ObjectOrientedIOItem"/> class.
+            </summary>
+            <param name="identifier">The identifier.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceCommon`1.#ctor(XAMCommon.Trace.XAMIOTrace,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.OOInterfaceBase"/> class.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceCommon`1.Init">
+            <summary>
+            Initializes the specified instance name.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.ObjectOriented.OOInterfaceCommonExtended`1">
+            <summary>
+            Object Oriented Interface Base
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.ObjectOriented.OOInterfaceCommonExtended`1.Valid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceCommonExtended`1.#ctor(XAMCommon.Trace.XAMIOTrace,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.OOInterfaceBase"/> class.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceCommonExtended`1.Init">
+            <summary>
+            Initializes the specified instance name.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.ObjectOriented.OOInterfaceBase">
+            <summary>
+            Object Oriented Interface Base
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.ObjectOriented.OOInterfaceBase.IsOnline">
+            <summary>
+            Gets a value indicating whether [is online].
+            </summary>
+            <value>
+              <c>true</c> if [is online]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:XAMIO.Base.ObjectOriented.OOInterfaceBase.instanceName">
+            <summary>
+            The instance name
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceBase.#ctor(XAMCommon.Trace.XAMIOTrace,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.ObjectOriented.OOInterfaceBase"/> class.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+        </member>
+        <member name="M:XAMIO.Base.ObjectOriented.OOInterfaceBase.Init">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.IXAMIOValue">
+            <summary>
+            I XAM IO Value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IXAMIOValue.IsChangedWrite">
+            <summary>
+            Gets a value indicating whether [is changed write].
+            </summary>
+            <value>
+              <c>true</c> if [is changed write]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.IXAMIOValue.SetValidReaded(System.String,System.DateTime)">
+            <summary>
+            Sets the valid readed.
+            </summary>
+            <param name="Message">The message.</param>
+            <param name="IOTime">The io time.</param>
+        </member>
+        <member name="M:XAMIO.Base.IXAMIOValue.SetValidWritten(System.String,System.Object,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the valid written.
+            </summary>
+            <param name="Message">The message.</param>
+            <param name="WrittenValue">The written value.</param>
+            <param name="IOTime">The io time.</param>
+            <param name="isControllerOnline">if set to <c>true</c> [is controller online].</param>
+            <param name="isValid">if set to <c>true</c> [is valid].</param>
+        </member>
+        <member name="T:XAMIO.Base.MultipleWriteException">
+            <summary>
+            XAM Multiple Write Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.MultipleWriteException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.MultipleWriteException" /> class.
+            </summary>
+            <param name="Message">The message.</param>
+        </member>
+        <member name="M:XAMIO.Base.MultipleWriteException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.MultipleWriteException" /> class.
+            </summary>
+            <param name="Message">The message.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOValue">
+            <summary>
+            XAM IO Value represents a IO Datapoint. It contains multiple XAM Read Values and One XAM Write Value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.LastWrittenValue">
+            <summary>
+            Last value to campare for write
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.WriteRetryCount">
+            <summary>
+            Gets or sets the write retry count.
+            </summary>
+            <value>
+            The write retry count.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.ReadRetryCount">
+            <summary>
+            Gets or sets the read retry count.
+            </summary>
+            <value>
+            The read retry count.
+            </value>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOValue.LastReadError">
+            <summary>
+            The last read error
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOValue.LastWriteError">
+            <summary>
+            The last write error
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.LastRead">
+            <summary>
+            Last  Read Time
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.LastWrite">
+            <summary>
+            Last  Write Time
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.Intervall">
+            <summary>
+            Intvall of write or read time [msec]
+            -1 not used
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.OffsetWriteValue">
+            <summary>
+            Write value offset
+            0 ... wirte every change
+             negative ... not valid
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsSendOnREOnly">
+            <summary>
+            Propertey only sends RE
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsOnline">
+            <summary>
+            all XAMControl properties are online
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsControllerOnline">
+            <summary>
+            Connection to XAMServer is ok
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.LastIsControllerOnline">
+            <summary>
+            Last connection to XAMServer was ok
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsValueOnline">
+            <summary>
+            all XAMControl properties are online
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsValid">
+            <summary>
+            is Valid
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsServer">
+            <summary>
+            is Valid
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.XamDataType">
+            <summary>
+            XAM Data type
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.Identifier">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.RetryMode">
+            <summary>
+            Gets or sets the retry mode.
+            </summary>
+            <value>
+            The retry mode.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.RetrySpan">
+            <summary>
+            Gets or sets the retry span.
+            </summary>
+            <value>
+            The retry span.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.WriteValueOnInit">
+            <summary>
+            Gets or sets a value indicating whether [write value on initialize].
+            </summary>
+            <value>
+            <c>true</c> if [write value on initialize]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.InvalidItems">
+            <summary>
+            Gets the invalid items.
+            </summary>
+            <value>
+            The invalid items.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.ForceNextWrite">
+            <summary>
+            Forces the next write of this item. Gets reset when SetValidWritten or SetInvalidWritten is called
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.LastReadValue">
+            <summary>
+            Last value to campare for read
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMIOValue" /> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.Update(XAMIO.Base.XAMIOValue)">
+            <summary>
+            update the basic settings
+            </summary>
+            <param name="newVal"> new item</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetDeactivated">
+            <summary>
+            Sets the propertie deactived
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetWriteDeactivated">
+            <summary>
+            Sets the write deactivated.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetReadDeactivated">
+            <summary>
+            Sets the read deactivated.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetConnectionState(XAMIO.Base.XAMIOConnectionStatus)">
+            <summary>
+            Sets the state of the connection.
+            </summary>
+            <param name="status">The Status.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetInvalidWritten(XAMCommon.PropertyQuality,System.String)">
+            <summary>
+            Sets the invalid written.
+            </summary>
+            <param name="quality">The quality.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetValidWritten(System.String,System.Object,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the propertie valid (qualtiy good) 
+            </summary>
+            <param name="Message"> message</param>
+            <param name="WrittenValue">written value</param>
+            <param name="isControllerOnline"></param>
+            <param name="isValid"></param>
+            <param name="IOTime">IO TIme</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetValidWritten(System.String,System.Object,XAMCommon.PropertyQuality,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the property valid
+            </summary>
+            <param name="Message">message</param>
+            <param name="WrittenValue">written value</param>
+            <param name="Quality">quality</param>
+            <param name="IOTime">io time</param>
+            <param name="isControllerOnline"></param>
+            <param name="isValid"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetValidReaded(System.Object,System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Sets the propertie valid (qualtiy good) 
+            </summary>
+            <param name="value">The new Value</param>
+            <param name="Message"> message</param>
+            <param name="IOTime"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetValidReaded(System.Object,System.String,XAMCommon.PropertyQuality,System.DateTime,System.Boolean)">
+            <summary>
+            Sets the propertie valid (qualtiy good) 
+            </summary>
+            <param name="value">The new value</param>
+            <param name="Message"> message</param>
+            <param name="Quality"></param>
+            <param name="IOTime"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetInvalidReaded(XAMCommon.PropertyQuality,System.String,System.Boolean)">
+            <summary>
+            Sets the invalid readed.
+            </summary>
+            <param name="quality">The quality.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetValidNotification(System.Object,System.String,XAMCommon.PropertyQuality,System.DateTime)">
+            <summary>
+            Sets the valid notification.
+            </summary>
+            <param name="value">The new value</param>
+            <param name="message">The message.</param>
+            <param name="quality">The quality.</param>
+            <param name="ioTime">The io time.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetInvalidNotification(XAMCommon.PropertyQuality,System.String)">
+            <summary>
+            Sets the invalid notification.
+            </summary>
+            <param name="quality">The quality.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsChangedWrite">
+            <summary>
+            is there a new value to write?
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.IsChangeRead">
+            <summary>
+            Gets a value indicating whether [is change read].
+            </summary>
+            <value>
+              <c>true</c> if [is change read]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValue.ValueChangedTime">
+            <summary>
+            Gets the time when the value was changed
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.ConnectionStateChanged(XAMIO.Base.XAMIOConnectionStatus)">
+            <summary>
+            Connections the state changed.
+            </summary>
+            <param name="state">The state.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.GetXAMValueNames">
+            <summary>
+            Gets the xam value names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.GetXAMValueNamesLazy">
+            <summary>
+            Gets the xam value names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.HasWriteChanged(System.Boolean@,System.Boolean@)">
+            <summary>
+            Determines whether [has write changed].
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.HasReadChanged">
+            <summary>
+            Determines whether [has read changed].
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValue.SetLogTimeOffAlarmVariables(System.Object,System.DateTime)">
+            <summary>
+            Set the log on or off time of alarm, message, warning variables
+            </summary>
+            <param name="value"> On/Off</param>
+            <param name="time">  on or off time</param>
+        </member>
+        <member name="T:XAMIO.Base.RetryMode">
+            <summary>
+            Retry Mode
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.RetryMode.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.RetryMode.Retry10Secounds">
+            <summary>
+            The retry10 secounds
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMValue">
+            <summary>
+            XAMValue represents a Value in the XAMControl System
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.PropertyConfig">
+            <summary>
+            Gets the property configuration.
+            </summary>
+            <value>
+            The property configuration.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.IsServer">
+            <summary>
+            Gets a value indicating whether [is server].
+            </summary>
+            <value>
+              <c>true</c> if [is server]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Index">
+            <summary>
+            Gets the index of the bit.
+            </summary>
+            <value>
+            The index of the bit.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+            <exception cref="T:System.InvalidOperationException">PropertyConfig is null</exception>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.DataType">
+            <summary>
+            Gets the type of the data.
+            </summary>
+            <value>
+            The type of the data.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Access">
+            <summary>
+            Gets the access.
+            </summary>
+            <value>
+            The access.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.IsWriteAccess">
+            <summary>
+            Gets a value indicating whether [is write access].
+            </summary>
+            <value>
+              <c>true</c> if [is write access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.IsReadAccess">
+            <summary>
+            Gets a value indicating whether [is read access].
+            </summary>
+            <value>
+              <c>true</c> if [is read access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.IsValueOnline">
+            <summary>
+            XAMControl Property is Online
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.IsControllerOnline">
+            <summary>
+            XAMServer connection is ok
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Quality">
+            <summary>
+            Quality of this variable
+            </summary>        
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.TimeSource">
+            <summary>
+            Set source time of the value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.TimeServer">
+            <summary>
+            Get source time of the value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.LogTimeOn">
+            <summary>
+            Get Log On Time
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.LogTimeOff">
+            <summary>
+            Get Log Off Time
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Trigger">
+            <summary>
+            Get trigger
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.LastTrigger">
+            <summary>
+            Last saved trigger value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.Message">
+            <summary>
+            Set server time of the value
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.ComplexPath">
+            <summary>
+            Gets or sets the complex path.
+            </summary>
+            <value>
+            The complex path.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMValue.ValueChangedTime">
+            <summary>
+            last changed DateTime for this value
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.#ctor(XAMIO.Base.XAMDriverPropertiesExtended,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValue"/> class.
+            </summary>
+            <param name="PropertyConfig">The property configuration.</param>
+            <param name="BitIndex">Index of the bit.</param>
+            <param name="isServer">if set to <c>true</c> [is server].</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.#ctor(System.String,XAMCommon.XAMControlDB.TYPE_DECLARATION,XAMCommon.XAMControlDB.DRIVER_DECLARATION,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMValue"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="type">The type.</param>
+            <param name="BitIndex">Index of the bit.</param>
+            <param name="access"></param>
+            <param name="isServer">if set to <c>true</c> [is server].</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.UpdateValueFromXAMServer(XAMCommon.ServiceReference.CommunicationValueItemReply,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Update XAMControl Property value
+            </summary>
+            <param name="ReplyValue"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.update(XAMIO.Base.IXAMValue)">
+            <summary>
+            Updates the specified new value.
+            </summary>
+            <param name="newVal">The new value.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.SetPLCCom(XAMCommon.IXAMPLCCom)">
+            <summary>
+            Set the PLC Com
+            </summary>
+            <param name="plcCom"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMValue.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:XAMIO.Base.XAMDriverPropertiesExtended">
+            <summary>
+            XAMDriver Properties Extended
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMDriverPropertiesExtended.ControlerName">
+            <summary>
+            Gets or sets the name of the controler.
+            </summary>
+            <value>
+            The name of the controler.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMDriverPropertiesExtended.PlcName">
+            <summary>
+            Gets or sets the name of the PLC.
+            </summary>
+            <value>
+            The name of the PLC.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMDriverPropertiesExtended.XAMVarType">
+            <summary>
+            Gets or sets the type of the xam variable.
+            </summary>
+            <value>
+            The type of the xam variable.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMDriverPropertiesExtended.Identifier">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMDriverPropertiesExtended.ParameterToks">
+            <summary>
+            Gets the parameter toks.
+            </summary>
+            <value>
+            The parameter toks.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.XAMDriverPropertiesExtended.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMDriverPropertiesExtended"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMDriverPropertiesExtended.GetOrDefault(System.Int32,System.String)">
+            <summary>
+            Gets the or default.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMDriverPropertiesExtended.GetOrDefaultDouble(System.Int32,System.Double)">
+            <summary>
+            Gets the or default double.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMDriverPropertiesExtended.SetConfigError(System.String)">
+            <summary>
+            Sets the configuration error.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOExceptionPropertyConfig">
+            <summary>
+            Exception of IO Property configuration
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOExceptionPropertyConfig.#ctor(System.String)">
+            <summary>
+            Exception of IO Property configuration
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOExceptionPropertyExisting">
+            <summary>
+            Exception of IO Property - property already created
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOExceptionPropertyExisting.#ctor(System.String)">
+            <summary>
+            Exception of IO Property configuration
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMPropertiesBrowser">
+            <summary>
+            XAM Properties Browser
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.#ctor(XAMIO.Base.XAMCom.IXAMServerContext,System.Int32,System.Boolean)">
+            <summary>
+            XAM Control Property Browser
+            </summary>
+            <param name="ServerContext"></param>
+            <param name="UserID"></param>
+        </member>
+        <member name="P:XAMIO.Base.XAMPropertiesBrowser.XAMControlers">
+            <summary>
+            Get a list of XAM controler of this solution
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMControler(System.String)">
+            <summary>
+            Find a XAM controler
+            </summary>
+            <param name="ControlerName">name of the controler</param>
+            <returns>XAMControler object</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.IsXAMControlerValid(System.String)">
+            <summary>
+            Check if XAM controler is valid
+            </summary>
+            <param name="ControlerName">name of the controler</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMPlcsOfControler(System.String)">
+            <summary>
+            Get all PLC's of a XAM controler
+            </summary>
+            <param name="ControlerName">name of the controler</param>
+            <returns>List of all PLC's</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMPlcs(System.String)">
+            <summary>
+            get plc container
+            </summary>
+            <param name="PlcName">name of the plc</param>
+            <returns>automation control container of the plc</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMPlcs(System.Int32)">
+            <summary>
+            get plc container
+            </summary>
+            <param name="PlcId">id of the plc</param>
+            <returns>automation control container of the plc</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.IsXAMPlcValid(System.String)">
+            <summary>
+            Check if plc is valid
+            </summary>
+            <param name="PLCname">name of the plc</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMRootInstancesOfPlc(System.String)">
+            <summary>
+            Get all root instances of a PLC
+            </summary>
+            <param name="PLCname">name of the plc</param>
+            <returns>list of instances</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMRootInstancesOfPlc(XAMCommon.XAMControlDB.AutomationControlContainer)">
+            <summary>
+            Get all root instances of a PLC
+            </summary>
+            <param name="PLC">name of the plc</param>
+            <returns>list of instances</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMRootPropertiesOfPlc(System.String)">
+            <summary>
+            Get all root properties of a PLC
+            </summary>
+            <param name="PLCname">name of the plc</param>
+            <returns>list of instances</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMInstance(System.String,System.String)">
+            <summary>
+            Check if instance is valid
+            </summary>
+            <param name="path"></param>
+            <param name="InstanceName"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.IsXAMInstanceValid(System.String)">
+            <summary>
+            Check if instance is valid
+            </summary>
+            <param name="InstanceName">name of the instance</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.IsXAMInstanceValid(System.String,System.String)">
+            <summary>
+            Check if instance is valid
+            </summary>
+            <param name="path">name of the instance</param>
+            <param name="InstanceName"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMPropertiesOfInstance(System.String,System.String)">
+            <summary>
+            Get all properties of a instance
+            </summary>
+            <param name="path">name of the instance</param>
+            <param name="InstanceName"></param>
+            <returns>list of instances</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMSubInstancesOfInstance(System.String,System.String)">
+            <summary>
+            Get all sub instances of a instance
+            </summary>
+            <param name="path">name of the instance</param>
+            <param name="InstanceName"></param>
+            <returns>list of instances</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMProperty(System.Int32)">
+            <summary>
+            get a xam property 
+            </summary>
+            <param name="PropertyID">property id</param>
+            <returns>xam property</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMProperty(System.String)">
+            <summary>
+            get a xam property 
+            </summary>
+            <param name="PropertyPath">property id</param>
+            <returns>xam property</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMPropertiesBrowser.GetXAMPropertyValue(XAMCommon.ServiceReference.CommunicationValueItemRequest[])">
+            <summary>
+            Get the value of xam instance property
+            </summary>
+            <param name="request">request list</param>
+            <returns>values</returns>
+        </member>
+        <member name="F:XAMIO.Base.XAMConnectionCollection`1.Status">
+            <summary>
+            Gets a value indicating whether [all online].
+            </summary>
+            <value>
+              <c>true</c> if [all online]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:XAMIO.Base.IIOConfigProvider">
+            <summary>
+            IOConfig Provider Interface
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IIOConfigProvider.GetList">
+            <summary>
+            Gets the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.IoVariableAdd">
+            <summary>
+            
+            </summary>
+            <param name="ioValue">The io value.</param>
+            <param name="xamval">The xamval.</param>
+        </member>
+        <member name="T:XAMIO.Base.IoVariableApply">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.IIOConnection">
+            <summary>
+            IO Connection Interface for use in XAMIOBase
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.VariableList">
+            <summary>
+            Gets the variable list.
+            </summary>
+            <value>
+            The variable list.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.BrowserList">
+            <summary>
+            The browser list
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.ConnectionID">
+            <summary>
+            Gets the connection identifier.
+            </summary>
+            <value>
+            The connection identifier.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.InUse">
+            <summary>
+            Gets or sets a value indicating whether [in use].
+            </summary>
+            <value>
+              <c>true</c> if [in use]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.IgnorePLCID">
+            <summary>
+            Gets or sets a value indicating whether [ignore plcid].
+            </summary>
+            <value>
+              <c>true</c> if [ignore plcid]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.VarListUpdatePending">
+            <summary>
+            Gets or sets a value indicating whether [variable list update pending].
+            </summary>
+            <value>
+            <c>true</c> if [variable list update pending]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.ServerContext">
+            <summary>
+            Gets or sets the server context.
+            </summary>
+            <value>
+            The server context.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.HighspeedMode">
+            <summary>
+            Gets or sets the highspeedmode. Attention this will cause higher CPU consumption
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.Delete">
+            <summary>
+            This connection is not used any more and can be deleted!
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.IIOConnection.Status">
+            <summary>
+            Gets or sets the status. 
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IIOConnection.Enable(System.Int32)">
+            <summary>
+            Enables the specified PLC identifier.
+            </summary>
+            <param name="PlcId">The PLC identifier.</param>
+        </member>
+        <member name="M:XAMIO.Base.IIOConnection.Disable">
+            <summary>
+            Disables this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IIOConnection.UpdateIOConfig(System.Collections.Generic.List{XAMIO.Base.XAMDriverPropertiesExtended},System.Int32@,System.Int32@)">
+            <summary>
+            Updates the io configuration.
+            </summary>
+            <param name="list">The list.</param>
+            <param name="ValidProperties">The valid properties.</param>
+            <param name="InValidProperties">The in valid properties.</param>
+        </member>
+        <member name="M:XAMIO.Base.IIOConnection.SetServerCom(XAMCommon.IXAMPLCCom)">
+            <summary>
+            Sets the server COM.
+            </summary>
+            <param name="XAMComClient">The xam COM client.</param>
+        </member>
+        <member name="M:XAMIO.Base.IIOConnection.Init">
+            <summary>
+            Initialize the connection
+            </summary>
+        </member>
+        <member name="E:XAMIO.Base.IIOConnection.AddIoVariableBase">
+            <summary>
+            Occurs when [add io variable].
+            </summary>
+        </member>
+        <member name="E:XAMIO.Base.IIOConnection.ApplyIoVariablesBase">
+            <summary>
+            Occurs when [apply io variables].
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.IOConfigXAMControllerProperties">
+            <summary>
+            IOConfig All XAMProperties
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMControllerProperties.#ctor(XAMIO.Base.XAMCom.IXAMServerContext,XAMCommon.ServiceReference.XAMIOProcessInfo,XAMCommon.IXAMPLCCom,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOConfigXAMControllerProperties"/> class.
+            </summary>
+            <param name="info">The information.</param>
+            <param name="serverContext">The Server context.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMControllerProperties.GetList">
+            <summary>
+            Gets the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.IOConfigSolution">
+            <summary>
+            IOConfig Solution
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigSolution.#ctor(XAMCommon.ServiceReference.XAMIOProcessInfo,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOConfigSolution"/> class.
+            </summary>
+            <param name="info">The information.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigSolution.GetList">
+            <summary>
+            Gets the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.IOConfigXAMProperties">
+            <summary>
+            IOConfig All XAMProperties
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMProperties.#ctor(XAMCommon.ServiceReference.XAMIOProcessInfo,XAMIO.Base.XAMCom.IXAMServerContext,System.Int32,XAMCommon.Trace.XAMIOTrace,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOConfigXAMProperties"/> class.
+            </summary>
+            <param name="info">The information.</param>
+            <param name="serverContext">The Server context.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMProperties.GetList">
+            <summary>
+            Gets the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.IOConfigXAMServer">
+            <summary>
+            IOConfig XAMServer
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMServer.#ctor(XAMCommon.ServiceReference.IXAMRTDB,XAMCommon.ServiceReference.XAMIOProcessInfo,XAMCommon.IXAMPLCCom,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.IOConfigXAMServer"/> class.
+            </summary>
+            <param name="com">The COM.</param>
+            <param name="info">The information.</param>
+            <param name="plcCom">The PLC COM.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Base.IOConfigXAMServer.GetList">
+            <summary>
+            Gets the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOConnectionStatus">
+            <summary>
+            XAMIOConnection Status of the Driver Connection
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.unknown">
+            <summary>
+            Unknown Connection Status
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.notConnected">
+            <summary>
+            Connection not Connected
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.GaOngoing">
+            <summary>
+            General Abfrage Ongoing
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.Connected">
+            <summary>
+            Connection Connected
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.Initalising">
+            <summary>
+            Connection Initialising
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionStatus.Disabled">
+            <summary>
+            Redundandent configuration - connection disabled
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.XAMServerIP">
+            <summary>
+            Gets the xam server ip.
+            </summary>
+            <value>
+            The xam server ip.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.IOName">
+            <summary>
+            Gets the name of the io.
+            </summary>
+            <value>
+            The name of the io.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.PLCCom">
+            <summary>
+            Gets the PLC COM.
+            </summary>
+            <value>
+            The PLC COM.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.TrendWriter">
+            <summary>
+            Gets the trend writer.
+            </summary>
+            <value>
+            The trend writer.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.LoginData">
+            <summary>
+            Gets the login data.
+            </summary>
+            <value>
+            The login data.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.ConnectionOk">
+            <summary>
+            Gets a value indicating whether [connection ok].
+            </summary>
+            <value>
+              <c>true</c> if [connection ok]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.EnableDirectWrite">
+            <summary>
+            Gets or sets a value indicating whether [enable direct write].
+            </summary>
+            <value>
+              <c>true</c> if [enable direct write]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.RTDBClient">
+            <summary>
+            Gets the RTDB client.
+            </summary>
+            <value>
+            The RTDB client.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.State">
+            <summary>
+            Gets the current connection state
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.Address">
+            <summary>
+            Gets the connection address
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMCom.IXAMServerContext.IOBase">
+            <summary>
+            Gets the io base.
+            </summary>
+            <value>
+            The io base.
+            </value>
+        </member>
+        <member name="T:XAMIO.Base.XAMCommunicationException">
+            <summary>
+            XAMControl communication exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMCommunicationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMCommunicationException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMCommunicationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMCommunicationException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMCommunicationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMCommunicationException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMCommunicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMCommunicationException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOConnectionBase`1">
+            <summary>
+            XAMIO Connection Base
+            </summary>
+            <typeparam name="TIOItem">The type of the io item.</typeparam>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IsMainServer">
+            <summary>
+            Gets a value indicating whether the connected XAMServer is running as [Main Server or Standalone].
+            </summary>
+            <value>
+              <c>true</c> if [Main Server or Standalone]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IsServer">
+            <summary>
+            Gets a value indicating whether [is server].
+            </summary>
+            <value>
+              <c>true</c> if [is server]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.ConnectionID">
+            <summary>
+            Connection ID (e.g. IP Address
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.VariableList">
+            <summary>
+            List of allIO variables to communicate
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.BrowserList">
+            <summary>
+            The browser list
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.BaseCycleTime">
+            <summary>
+            base xamcontrol communication cycle time 
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.InUse">
+            <summary>
+            IO connection is in Use
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.VarListUpdatePending">
+            <summary>
+            Variable List update Request is pending
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMIOConnectionBase`1.KeepRunningIfXAMServerConnectionIsBroken">
+            <summary>
+            keep running if XAMServer connection is broken
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IgnorePLCID">
+            <summary>
+            PLC ID will be ignored. This is needed if we don't update after compiling
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IsWriteDisabled">
+            <summary>
+            Gets or sets a value indicating whether [is write disabled].
+            </summary>
+            <value>
+              <c>true</c> if [is write disabled]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.Status">
+            <summary>
+            Status of Driver
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IsUpdateNeeded">
+            <summary>
+            Determines, if an variable update can be done
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.StatusParameter">
+            <summary>
+            Set Connection Status parameters
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.CfgParameters">
+            <summary>
+            Get configuration parameter
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.CfgParametersChanged">
+            <summary>
+            configuration parameter has changed
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.ServerContext">
+            <summary>
+            Gets or sets the server context.
+            </summary>
+            <value>
+            The server context.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.HighspeedMode">
+            <summary>
+            Gets or sets the highspeedmode. Attention this will cause higher CPU consumption
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.Delete">
+            <summary>
+            This connection is not used any more and can be deleted!
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.ProcessInfo">
+            <summary>
+            Gets the process information.
+            </summary>
+            <value>
+            The process information.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOConnectionBase`1.IsStopCommunication">
+            <summary>
+            Gets a value indicating whether [is stop communication].
+            </summary>
+            <value>
+              <c>true</c> if [is stop communication]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,XAMCommon.ServiceReference.XAMIOProcessInfo,System.String,System.String,XAMIO.Base.IOStandbyMode.Mode,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            XAM IO Connection
+            </summary>
+            <param name="p">proccess information</param>
+            <param name="connectionId"> connection ID of this connection</param>
+            <param name="XAMServerIP">XAMServer address</param>
+            <param name="SingleThreaded"></param>
+            <param name="isServer"></param>
+            <param name="createBrowserListOnInit"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.Dispose">
+            <summary>
+            Dispose all connections
+            </summary>
+        </member>
+        <member name="E:XAMIO.Base.XAMIOConnectionBase`1.AddIoVariableBase">
+            <summary>
+            Occurs when [add io variable].
+            </summary>
+        </member>
+        <member name="E:XAMIO.Base.XAMIOConnectionBase`1.ApplyIoVariablesBase">
+            <summary>
+            Occurs when [apply io variables].
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.Enable(System.Int32)">
+            <summary>
+            Enable connection
+            </summary>
+            <param name="PLCId"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.Disable">
+            <summary>
+            Disable connection
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.UpdateIOConfig(System.Collections.Generic.List{XAMIO.Base.XAMDriverPropertiesExtended},System.Int32@,System.Int32@)">
+            <summary>
+            Updates the io configuration.
+            </summary>
+            <param name="ioConfig">The io configuration.</param>
+            <param name="ValidProperties">The valid properties.</param>
+            <param name="InValidProperties">The in valid properties.</param>        
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.AddIoVariable(XAMIO.Base.XAMIOValue,XAMIO.Base.IXAMValue)">
+            <summary>
+            Adds the io variable.
+            </summary>
+            <param name="ioValue">The io value.</param>
+            <param name="xamval">The xamval.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.ApplyIoVariables">
+            <summary>
+            Applies the io variables.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.TraceAllInvalidVariables">
+            <summary>
+            TraceAllInvalidVariables
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.WriteAllBufferdValues(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.SetAllItemsToBufferd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.UpdateValue(XAMCommon.Trace.XAMIOTrace,`0,XAMIO.Base.XAMDriverPropertiesExtended,System.Nullable{System.Int32}@,System.String@)">
+            <summary>
+            create a new io value
+            this is called by base framework for each driver config after a new configuration was received
+            </summary>
+            <param name="config">The configuration.</param>
+            <param name="bitindex">out the bitindex if value is bitfiels else null</param>
+            <param name="complexPath">out the complexPath of the value or null</param>
+            <returns>a new IO Value of type <typeparamref name="TIOItem"/></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.DisposeConnection">
+            <summary>
+            Dispose Connection
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.DoRead">
+            <summary>
+            this function is called every driver cycle
+            add your code to read data here
+            </summary>
+            <returns>number of items read in this cycle</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.DoWrite">
+            <summary>
+            this function is called every driver cycle
+            add your code to write data here
+            </summary>
+            <returns>number of items wrote in this cycle</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.StopCommunication">
+            <summary>
+            stop communication to endpoint!
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.DoRWDisabled">
+            <summary>
+            this function is called every cycle if the the doRead and DoWrite is disabled
+            add your code to read data here
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.DisableClient">
+            <summary>
+            implement function code to switch the connection to standby here (disable)
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.EnableClient">
+            <summary>
+            implement function code to enable the connection here
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.CheckAndConnect">
+            <summary>
+            Checks the and connect.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.ConfigChanged(System.Collections.Generic.List{System.String})">
+            <summary>
+            Configurations the changed.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.SetStatus">
+            <summary>
+            Sets the status.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.worker_DoWorkMaintenance">
+            <summary>
+            main run function
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.worker_DoWork">
+            <summary>
+            main run function
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.connectionInterfaceworker_DoWork">
+            <summary>
+            Seperate thread for the interface read and write part
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.GetWorkerSleepTime(System.Int32)">
+            <summary>
+            Calculates the needed sleep time after the workers cycle
+            </summary>
+            <param name="elapsedMs">the elapsed ms in the workers cycle</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.MakeRetry(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="FailCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.GetNewFailCount">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.SetConnectionStatus(XAMIO.Base.XAMIOConnectionStatus)">
+            <summary>
+            Set connection status of this driver
+            </summary>
+            <param name="Status">connection status</param>
+            <returns>Changed</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.GetCfgParametersOrDefault(System.Int32,System.String)">
+            <summary>
+            Gets the CFG parameters or default.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.UpdateInterface(XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnection)">
+            <summary>
+            update the interface list
+            </summary>
+            <param name="connectionInterface"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.InterfacesDoWrite">
+            <summary>
+            Call the write for the interfaces
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOConnectionBase`1.InterfacesDoRead">
+            <summary>
+            Call the read for the interfaces
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMVarListMode">
+            <summary>
+            XAM VarList Mode
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMVarListMode.IOVariablesFromXAMServer">
+            <summary>
+            The io variables from xam server
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMVarListMode.IOVariablesFromDB">
+            <summary>
+            The io variables from database
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMVarListMode.AllXAMServerVariables">
+            <summary>
+            All xam server variables
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMVarListMode.AllPublicXAMServerVariables">
+            <summary>
+            All public xam server variables
+            </summary>
+        </member>
+        <member name="F:XAMIO.Base.XAMVarListMode.AllXAMControllerVariables">
+            <summary>
+            All xam variables from current controller
+            </summary>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOBase">
+            <summary>
+            base class for any Driver process
+            connects to XAMServer to send lifetick an process informations an to check if any driver config has changed
+            raises OnDriverConfigChanged event if a new driver configuration is available
+            </summary> 
+        </member>
+        <member name="F:XAMIO.Base.XAMIOBase.AutoReinitTime">
+            <summary>
+            Automatic reinit of the changed mode. (time in minutes, 0 disable)
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOBase.IsSubPlc">
+            <summary>
+            Gets a value indicating whether [is sub PLC].
+            </summary>
+            <value>
+              <c>true</c> if [is sub PLC]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOBase.ServerContext">
+            <summary>
+            Gets the server context.
+            </summary>
+            <value>
+            The server context.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOBase.ProcessInfo">
+            <summary>
+            Gets the process information.
+            </summary>
+            <value>
+            The process information.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,System.String,System.String,System.Boolean,System.Boolean,XAMIO.Base.XAMVarListMode,System.Boolean,System.Boolean,System.Boolean,XAMIO.Base.ObjectOriented.Connection.IOOInterfaceConnectionHandler)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="iOName">add the IO name here - this has to be the as as you use in your excel config</param>
+            <param name="xAMServerIP">IP of XAMServer</param>
+            <param name="isService"></param>
+            /// <param name="isServer">this is a server driver</param>
+            <param name="getVarListMode">Get the variable list from XMAServer Database and not from XAMServer via WCF</param>
+            <param name="disableVarListUpdateOnPLCIDChanged">Don't update the variable list on every PLC ID changed</param>
+            <param name="enableTrendWorker"></param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.Run">
+            <summary>
+            function called by windows service
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.worker_DoWork">
+            <summary>
+            main run function
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.UpdateConnectionInterfaces">
+            <summary>
+            Update the used/needed connection interfaces and remove the unused
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.CreateNewIOConnection(System.Collections.Generic.List{System.String})">
+            <summary>
+            create a new IO connection
+            </summary>
+            <param name="ConnectionIDs">List of  connection IDs</param>
+            <returns>a new driver connection</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.CheckIOConfig(System.Collections.Generic.List{System.String})">
+            <summary>
+            override this function with your specific driver config check
+            throw an exception if the config is not valid
+            </summary>
+            <param name="ConnectionIDs">List of  connection IDs</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.OnStart">
+            <summary>
+            Called when [start].
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.AddIoVariable(System.String,System.String,XAMIO.Base.XAMDriverPropertiesExtended,XAMIO.Base.XAMIOValue,XAMIO.Base.IXAMValue)">
+            <summary>
+            Add a new XAM Variable to the IO List
+            </summary>
+            <param name="IOName"></param>
+            <param name="Identifier">identifier of the variable</param>
+            <param name="actProp">io (driver) property</param>
+            <param name="ioValue">io (driver) property</param>
+            <param name="xamval">xam value</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.AddIoVariable(System.String,XAMIO.Base.XAMIOValue,XAMIO.Base.IXAMValue)">
+            <summary>
+            Adds the io variable.
+            </summary>
+            <param name="IOName">Name of the io.</param>
+            <param name="ioValue">The io value.</param>
+            <param name="xamval">The xamval.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.RemoveIoVariable(System.String,System.String,System.String)">
+            <summary>
+            Remove a single XAM variable from the IO List
+            </summary>
+            <param name="IOName"></param>
+            <param name="Identifier">identifier of the variable</param>
+            <param name="XAMVarname">xam value vriable name</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.ApplyIoVariables">
+            <summary>
+            Applies the io variables.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.InitSubPLCProperties">
+            <summary>
+            Intialize the sub plc routing
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.CheckConnectToXAMServer(System.Int32)">
+            <summary>
+            Connect to XAMServer
+            </summary>
+            <param name="RetryCount"> if connection fails - retry count</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.GetLoginDataFromXAMServer(System.String,System.String,System.String)">
+            <summary>
+            Get Login data from xamserver
+            </summary>
+            <returns>login data</returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.GetInstanceList(System.String,System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            GetInstanceList: return all InstanceNames of the Spezific Automation Control
+            </summary>
+            <param name="xamserverIPAddress">XAMServer IP Address</param>
+            <param name="accName">Automation Control Name</param>
+            <param name="trace">XAMTrace</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOBase.GetGlobalInstanceList(System.String,System.String,XAMCommon.Trace.XAMIOTrace)">
+            <summary>
+            GetGlobalInstanceList: return all global InstanceNames of the Spezific Automation Control
+            </summary>
+            <param name="xamserverIPAddress">XAMServer IP Address</param>
+            <param name="accName">Automation Control Name</param>
+            <param name="trace">XAMTrace</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.XAMIOValueCollection">
+            <summary>
+            XAM IOValue Collection
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValueCollection.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMIOValueCollection.Values">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.#ctor(XAMCommon.ServiceReference.XAMIOComInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMIOValueCollection"/> class.
+            </summary>
+            <param name="inforequest">The inforequest.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.GetItem(System.String)">
+            <summary>
+            get an IO Item
+            </summary>
+            <param name="identifier">identifier</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.AddItem(System.String,XAMIO.Base.XAMIOValue)">
+            <summary>
+            add an IO Item  --> this function will be called from the main driver (base) when we get a new variable list
+            </summary>
+            <param name="identifier">The identifier.</param>
+            <param name="ioitem">The ioitem.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.AddXAMItem(System.String,XAMIO.Base.IXAMValue)">
+            <summary>
+            Adds the xam item.
+            </summary>
+            <param name="identifier">The identifier.</param>
+            <param name="item">The item.</param>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.GetXAMItem(System.String)">
+            <summary>
+            Gets the xam item --> this function will be called from the main driver (base) when we get a new variable list
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.RemoveXAMItem(System.String,System.String)">
+            <summary>
+            add an XAM Item  --> this function will be called from the main driver (base) when we get a new variable list
+            </summary>
+            <param name="identifier">identifier --> if the identifier already exists we are updating the properties</param>
+            <param name="XAMPropName">XAM item name</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.Clear">
+            <summary>
+            clear IO variable list
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.SetAllPropertiesDeactivated">
+            <summary>
+             set all properties deactivated
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.SetWritePropertiesDeactivated">
+            <summary>
+             set write properties deactivated
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.SetReadPropertiesDeactivateds">
+            <summary>
+             set read properties deactivated
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.SetWritePropertiesLastChangeIgnored">
+            <summary>
+             set write properties write value ignore
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{System#String,XAMIO#Base#XAMIOValue}}#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.AddOOItem(XAMIO.Base.IXAMValue,System.Boolean)">
+            <summary>
+            Adds the oo item.
+            </summary>
+            <param name="j">The j.</param>
+            <param name="CountAsDriverProperty">if set to <c>true</c> [count as driver property].</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.GetOOValues">
+            <summary>
+            Gets the oo values.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Base.XAMIOValueCollection.GetOOValue(System.String)">
+            <summary>
+            Gets the oo value.
+            </summary>
+            <param name="p">The p.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Base.XAMServerBusyException">
+            <summary>
+            XAMServer Busy Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMServerBusyException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMServerBusyException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMServerBusyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMServerBusyException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMServerBusyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMServerBusyException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:XAMIO.Base.XAMServerBusyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMServerBusyException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:XAMIO.Base.XAMServerContext">
+            <summary>
+            XAMServer Context
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.XAMServerIP">
+            <summary>
+            Gets the xam server ip.
+            </summary>
+            <value>
+            The xam server ip.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.IOName">
+            <summary>
+            Gets the name of the io.
+            </summary>
+            <value>
+            The name of the io.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.PLCCom">
+            <summary>
+            Gets the PLC COM.
+            </summary>
+            <value>
+            The PLC COM.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.TrendWriter">
+            <summary>
+            Gets the trend writer.
+            </summary>
+            <value>
+            The trend writer.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.LoginData">
+            <summary>
+            Gets the login data.
+            </summary>
+            <value>
+            The login data.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.RTDBClient">
+            <summary>
+            Gets the RTDB client.
+            </summary>
+            <value>
+            The RTDB client.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.ConnectionOk">
+            <summary>
+            Gets a value indicating whether [connection ok].
+            </summary>
+            <value>
+              <c>true</c> if [connection ok]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.EnableDirectWrite">
+            <summary>
+            Gets or sets a value indicating whether [enable direct write].
+            </summary>
+            <value>
+              <c>true</c> if [enable direct write]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.IOBase">
+            <summary>
+            Gets the io base.
+            </summary>
+            <value>
+            The io base.
+            </value>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.State">
+            <summary>
+            Gets the current connection state
+            </summary>
+        </member>
+        <member name="P:XAMIO.Base.XAMServerContext.Address">
+            <summary>
+            Gets the connection address
+            </summary>
+        </member>
+        <member name="M:XAMIO.Base.XAMServerContext.#ctor(XAMIO.Base.XAMIOBase,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Base.XAMServerContext"/> class.
+            </summary>
+            <param name="ioBase"></param>
+            <param name="xamserverIp">The xamserver ip.</param>
+            <param name="ioName">Name of the io.</param>
+        </member>
+    </members>
+</doc>

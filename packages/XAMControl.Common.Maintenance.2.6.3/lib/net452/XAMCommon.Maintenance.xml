@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAMCommon.Maintenance</name>
+    </assembly>
+    <members>
+        <member name="T:XAMCommon.Maintenance.DatabaseLoginInfo">
+            <summary>
+            Database Login Info
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.DatabaseLoginInfo.User">
+            <summary>
+            Gets or sets the user.
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.DatabaseLoginInfo.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.DatabaseLoginInfo.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>
+            The connection string.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.DatabaseLoginInfo.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.DatabaseLoginInfo.UseTrustedConnection">
+            <summary>
+            Gets or sets the use of the trusted connection
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.DatabaseLoginInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.DatabaseLoginInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.DatabaseLoginInfo.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.DatabaseLoginInfo"/> class.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="database">The database.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.DatabaseLoginInfo.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.DatabaseLoginInfo"/> class.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="useTrustedConnection">Use the trusted connection.</param>
+            <param name="database">The database</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.DatabaseLoginInfo.CreateServerConnection">
+            <summary>
+            Creates a ServerConnection from the LoginInfo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.DatabaseLoginInfo.CreateServerConnectionIgnoreDatabase">
+            <summary>
+            Creates a ServerConnection from the LoginInfo ignore the database from the LoginInfo.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Maintenance.IXAMDBInitializer">
+            <summary>
+            Interface to initialize external databses, which are installed on a XAMControl system.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.IXAMDBInitializer.Initialize(System.String,System.String,System.String)">
+            <summary>
+            Initialize a external database with the given settings. (The database must be installed on the same database server as the XAMControl system.)
+            </summary>
+            <param name="connectionString">The database connection string.</param>
+            <param name="userName">The database user name.</param>
+            <param name="password">The database password.</param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.SmoInitializer">
+            <summary>
+            Initialize the SMO assemblies. (This is nessessary for AnyCPU compilation.)
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.SmoInitializer.IsInitialized">
+            <summary>
+            Gets if it was initialized
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.SmoInitializer.Initialize">
+            <summary>
+            Initialize the SMO assemblies, if it was already initialized it do nothing.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Maintenance.SqlDatabaseInfo">
+            <summary>
+            Gets the prinzipal server from a connection string with a failover partner.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.SqlDatabaseInfo.GetPrinzipalFromConnection(XAMCommon.Maintenance.DatabaseLoginInfo)">
+            <summary>
+            Gets the prinzipal server from a connection string with a failover partner. 
+            </summary>
+            <param name="login">The login info.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMDBInitializer">
+            <summary>
+            Initialize external databases, which implements the interface 'IXAMDBInitializer'.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMDBInitializer.#ctor">
+            <summary>
+            Initialize the db initializer.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMDBInitializer.Initialize(System.Collections.Generic.List{System.String},System.String,System.String,System.String)">
+            <summary>
+            Initialize all external databses which implements the interface 'IXAMDBInitializer'.
+            </summary>
+            <param name="assemblies">The list of the assemblies.</param>
+            <param name="connectionString">The connection string.</param>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMDBInitializer.InitializeAsync(System.Collections.Generic.List{System.String},System.String,System.String,System.String)">
+            <summary>
+            Initialize all external databases which implements the interface 'IXAMDBInitializer' asynchron.
+            </summary>
+            <param name="assemblies">The list of the assemblies.</param>
+            <param name="connectionString">The connection string.</param>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <returns>The background task.</returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMDBInitializer.InitializeFromAssembly(System.Reflection.Assembly,System.String,System.String,System.String)">
+            <summary>
+            Initailize an external database from an assembly which implemnts the interface 'IXAMDBInitializer'.
+            </summary>
+            <param name="assembly">The assembly.</param>
+            <param name="connectionString">The connection string.</param>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMDBInitializerException">
+            <summary>
+            Database initialize exception
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMDBInitializerException.ErrorList">
+            <summary>
+            The internal error list
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMDBInitializerException.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorList"></param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlCopyDatabase">
+            <summary>
+            Copies a database with a selected sql-script from a source to a target database.
+            </summary>
+        </member>
+        <member name="E:XAMCommon.Maintenance.XAMSqlCopyDatabase.TraceChanged">
+            <summary>
+            The State changed event
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlCopyDatabase.#ctor">
+            <summary>
+            Creates the copy object.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlCopyDatabase.ExportPath">
+            <summary>
+            Gets or sets the export path.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlCopyDatabase.Debug">
+            <summary>
+            Gets or sets the debug flag.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlCopyDatabase.GetNewExportPath">
+            <summary>
+            Gets the exprot path from the temp directory. (%APPDATA%/Temp/XAMControl/DBExport/[CurrentDateTime])
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlCopyDatabase.ExportImportWithScript(XAMCommon.Maintenance.DatabaseLoginInfo,XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.Int32)">
+            <summary>
+            Execute an export with a script. Create a linked server on the destination for transfer data.
+            </summary>
+            <param name="sourceLogin">Login Info from the source database.</param>
+            <param name="destinationLogin">Login info from the destination database.</param>
+            <param name="scriptFile">File path of the script wich schould be executed.</param>
+            <param name="replace">This string is replaced in the script with the source connection.</param>
+            <param name="timeout">timeout for executing the script</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlCopyDatabase.ExportData(XAMCommon.Maintenance.DatabaseLoginInfo,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="login"></param>
+            <param name="tables"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlCopyDatabase.ImportData(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Import data from export path
+            </summary>
+            <param name="login"></param>
+            <param name="importPath"></param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMExecMessageEventArgs">
+            <summary>
+            EventArgs for ExecMessage
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMExecMessageEventArgs.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates the XAMExecMessageEventArs
+            </summary>
+            <param name="message"></param>
+            <param name="isError"></param>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecMessageEventArgs.IsError">
+            <summary>
+            Gets or the error flag.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecMessageEventArgs.Message">
+            <summary>
+            Gets the error message.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlDatabaseCreate">
+            <summary>
+            SQL Database create class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlDatabaseCreate.Create(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Create a database on the server defined in the login data. 
+            </summary>
+            <param name="login">The login info.</param>
+            <param name="database">The database name.</param>
+            <param name="fileGroups">The list of the filegroups.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlDatabaseCreate.ExistsDatabase(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Checks if the database already exists on the server defined in the login.
+            </summary>
+            <param name="login">The login info.</param>
+            <param name="database">The database name.</param>
+            <returns>Returns true if the database exists.</returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlDatabaseCreate.ExistsTable(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String)">
+            <summary>
+            Checks if a table exists in the defined database.
+            </summary>
+            <param name="login">The login info.</param>
+            <param name="database">The database name.</param>
+            <param name="tableName">The table name.</param>
+            <param name="schema">The schema name. (default is dbo)</param>
+            <returns>Returns true if the table and the database exists.</returns>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlException">
+            <summary>
+            XAM Sql Database Create Exception
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackupException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlExecuteBatch">
+            <summary>
+            Execute SQL-Statements (Batches)
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExecuteScript(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Execute a SQL-Script from a given statement.
+            </summary>
+            <param name="login"></param>
+            <param name="statement"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExecuteScriptFromStream(XAMCommon.Maintenance.DatabaseLoginInfo,System.IO.Stream)">
+            <summary>
+            Execute a Script from a stream.
+            </summary>
+            <param name="login"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExecuteStriptFromResource(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String)">
+            <summary>
+            Execute a SQL-Stript from a resourcefile
+            </summary>
+            <param name="login"></param>
+            <param name="Namespace"></param>
+            <param name="ScriptFileName"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExecuteStriptFromResource(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String)">
+            <summary>
+            Execute a SQL-Stript from a resourcefile from an assembly
+            </summary>
+            <param name="login"></param>
+            <param name="assembly"></param>
+            <param name="Namespace"></param>
+            <param name="ScriptFileName"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExecuteScriptFile(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Execute as SQL-Script file
+            </summary>
+            <param name="login"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlExecuteBatch.ExistsSqlResourceScript(System.String,System.String)">
+            <summary>
+            Checks if a SQL resource file exists.
+            </summary>
+            <param name="Namespace"></param>
+            <param name="ScriptFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlReplication">
+            <summary>
+            Run a replication from a SQL-Server.
+            </summary>
+        </member>
+        <member name="E:XAMCommon.Maintenance.XAMSqlReplication.StateChanged">
+            <summary>
+            The State changed event
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.SynchronizePullSubsription(XAMCommon.Maintenance.DatabaseLoginInfo,XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String)">
+            <summary>
+            Synchronize a pull subscription.
+            </summary>
+            <param name="publisherLogin">The login info for the publisher.</param>
+            <param name="subscriberLogin">The login info for the subscriber.</param>
+            <param name="publicationName">The publication name.</param>
+            <param name="publicationDB">The name of the publication database.</param>
+            <param name="subscriptionDB">The name of the subscriped database.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.InitializePullSubscription(XAMCommon.Maintenance.DatabaseLoginInfo,XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String)">
+            <summary>
+            Initialize a pull subscription for cyclic synchronize.
+            </summary>
+            <param name="publisherLogin">The login info for the publisher.</param>
+            <param name="subscriberLogin">The login info for the subscriber.</param>
+            <param name="publicationName">The publication name.</param>
+            <param name="publicationDB">The name of the publication database.</param>
+            <param name="subscriptionDB">The name of the subscriped database.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.Synchronize">
+            <summary>
+            Synchronize the subscription.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.DeinitSubscription">
+            <summary>
+            Deinitialize the subscription.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplication.Dispose(System.Boolean)">
+            <summary>
+            Dispose the object-
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlReplicationCreate">
+            <summary>
+            Configure a replication on a SQL-Server. (distributor, publisher, or subscriber)
+            </summary>
+        </member>
+        <member name="E:XAMCommon.Maintenance.XAMSqlReplicationCreate.StateChanged">
+            <summary>
+            The State changed event
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.CreateDistributor(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Create a distributor and publisher on the given server.
+            </summary>
+            <param name="login">The login info for the distributor.</param>
+            <param name="snapshotFolder">The snapshot folder.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.CreateDistributorOnMirror(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String)">
+            <summary>
+            Create a distributor and publisher on a mirror system. The distributor can also run on the prinzipal host.
+            </summary>
+            <param name="login">The login info for the distributor.</param>
+            <param name="prinzipal">The connection string to the prinzipal host.</param>
+            <param name="mirror">The connection string to the mirror host.</param>
+            <param name="snapshotFolder">The snapshot folder.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.DeleteDistributor(XAMCommon.Maintenance.DatabaseLoginInfo,System.Boolean)">
+            <summary>
+            Delete the distributor from the given login
+            </summary>
+            <param name="login">The login info for the distributor.</param>
+            <param name="force">Force a delete.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.CreateTransactionPublication(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Create a transaction publication.
+            </summary>
+            <param name="login">The login info for the publisher.</param>
+            <param name="name">The name of the publication.</param>
+            <param name="publicationDB">The database name to publicate.</param>
+            <param name="tables">The list of tables to publicate.</param>
+            <param name="description">The description of the publication.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.DeleteTransactionPublication(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.Boolean)">
+            <summary>
+            Delete a transaction publication.
+            </summary>
+            <param name="login">The login info for the publisher.</param>
+            <param name="name">The name of the publication.</param>
+            <param name="publicationDB">The publicated database name.</param>
+            <param name="force">Force a delete.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.CreateTransactionPullSubscription(XAMCommon.Maintenance.DatabaseLoginInfo,XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Create a transaction pull subscription.
+            </summary>
+            <param name="publisherLogin">The login info for the publisher.</param>
+            <param name="subscriberLogin">The login info for the subscriber.</param>
+            <param name="publicationName">The name of the publication.</param>
+            <param name="publicationDB">The name of the publicated database.</param>
+            <param name="subscriptionDB">The name of the subscibed database.</param>
+            <param name="createJob">Create a job for the subscription.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlReplicationCreate.DeleteTransactionPullSubscription(XAMCommon.Maintenance.DatabaseLoginInfo,XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Delete a transaction pull subscription from the subscriber and the publisher.
+            </summary>
+            <param name="publisherLogin">The login info for the publisher.</param>
+            <param name="subscriberLogin">The lobin infto for the subscriber.</param>
+            <param name="publicationName">The name of the publication.</param>
+            <param name="publicationDB">The name of the publicated database.</param>
+            <param name="subscriptionDB">The name of the subscribed database.</param>
+            <param name="force">Force a delete.</param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMExecStateEventArgs">
+            <summary>
+            Event Args for the ExecState
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState">
+            <summary>
+            Enum for the WorkState
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState.None">
+            <summary>
+            No state
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState.Running">
+            <summary>
+            Running state
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState.Success">
+            <summary>
+            Success state
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState.Warning">
+            <summary>
+            Warning state
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState.Error">
+            <summary>
+            Error state
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMExecStateEventArgs.#ctor(System.Int32,System.String,XAMCommon.Maintenance.XAMExecStateEventArgs.WorkState,System.String)">
+            <summary>
+            Creates the XAMExecStateEventArgs
+            </summary>
+            <param name="actionId"></param>
+            <param name="action"></param>
+            <param name="state"></param>
+            <param name="message"></param>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecStateEventArgs.ActionId">
+            <summary>
+            Gets the action ID.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecStateEventArgs.Action">
+            <summary>
+            Gets the name of the action.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecStateEventArgs.Message">
+            <summary>
+            Gets the message.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMExecStateEventArgs.State">
+            <summary>
+            Gets the state.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlServerBackup">
+            <summary>
+            SQl Server Backup Class
+            </summary>
+        </member>
+        <member name="F:XAMCommon.Maintenance.XAMSqlServerBackup.DefaultBackupDirectory">
+            <summary>
+            The XAMControl default backup directory
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlServerBackup.PercentCompleteNotification">
+            <summary>
+            Gets or sets the percent complete notification.
+            </summary>
+            <value>
+            The percent complete notification.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlServerBackup.BackupDescription">
+            <summary>
+            Gets or sets the description of a backup.
+            </summary>
+        </member>
+        <member name="E:XAMCommon.Maintenance.XAMSqlServerBackup.PercentCompleteChanged">
+            <summary>
+            Occurs when [percent complete changed].
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlServerBackup.IsRunning">
+            <summary>
+            Gets a value indicating whether [is running].
+            </summary>
+            <value>
+              <c>true</c> if [is running]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMSqlServerBackup.DeleteExistingFiles">
+            <summary>
+            Gets or sets a value indicating whether [delete existing files].
+            </summary>
+            <value>
+              <c>true</c> if [delete existing files]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackup"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.#ctor(XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackup"/> class.
+            </summary>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.Backup(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Backups the specified connection string.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="database">The database.</param>
+            <param name="projectName">Name of the project.</param>
+            <returns>The Backup File Path</returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.Backup(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Backups the specified login.
+            </summary>
+            <param name="login">The login.</param>
+            <param name="projectName">Name of the project.</param>
+            <returns>The Backup File Path</returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupToFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Backups to file.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="database">The database.</param>
+            <param name="path">The path.</param>
+            <returns>The Backup File Path</returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupToFile(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Backups to file.
+            </summary>
+            <param name="login">The login.</param>
+            <param name="path">The path.</param>
+            <returns>The Backup File Path</returns>
+            <exception cref="T:System.IO.IOException">File already exists</exception>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.RestoreFromFile(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Restores from file.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="database">The database.</param>
+            <param name="relocateFiles">Relocate all files to the new current SQL-Instance.</param>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.RestoreFromFile(XAMCommon.Maintenance.DatabaseLoginInfo,System.String,System.Boolean)">
+            <summary>
+            Restores from file.
+            </summary>
+            <param name="login">The login.</param>
+            <param name="path">The path.</param>
+            <param name="relocateFiles">Relocate all files to the new current SQL-Instance.</param>
+            <exception cref="T:System.IO.FileNotFoundException">Backup File not found</exception>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.GetBackupFromFile(XAMCommon.Maintenance.DatabaseLoginInfo,System.String)">
+            <summary>
+            Gets the backup info from a backup file
+            </summary>
+            <param name="login"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.Abort">
+            <summary>
+            Aborts this instance.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.OnPercentCompleteEventArgs(System.Int32,System.String,System.String)">
+            <summary>
+            Called when [percent complete event arguments].
+            </summary>
+            <param name="percent">The percent.</param>
+            <param name="message">The message.</param>
+            <param name="errorMessage">The error message.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupFileName(System.String,System.DateTime,System.String)">
+            <summary>
+            Builds the name of the file.
+            </summary>
+            <param name="database">The database.</param>
+            <param name="timestamp">The timestamp.</param>
+            <param name="projectName">Name of the project.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupFilePath(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Backups the file path.
+            </summary>
+            <param name="folder">The path.</param>
+            <param name="database">The database.</param>
+            <param name="timestamp">The timestamp.</param>
+            <param name="projectName">Name of the project.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupFilePathDefaultFolder(System.String,System.String)">
+            <summary>
+            Backups the file path default folder.
+            </summary>
+            <param name="database">The database.</param>
+            <param name="fileName">Name of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.BackupDefaultFilePath(System.String,System.DateTime,System.String)">
+            <summary>
+            Defaults the backup file path.
+            </summary>
+            <param name="database">The database.</param>
+            <param name="timestamp">The timestamp.</param>
+            <param name="projectName">Name of the project.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackup.DatabaseNameFromBackupPath(System.String)">
+            <summary>
+            Databases the name from path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns></returns>
+            <exception cref="T:Microsoft.SqlServer.Management.Common.InvalidArgumentException">Invalid Filename</exception>
+        </member>
+        <member name="T:XAMCommon.Maintenance.PercentCompleteEventArgs">
+            <summary>
+            Percent Complete Event Args
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.PercentCompleteEventArgs.Percent">
+            <summary>
+            Gets the percent.
+            </summary>
+            <value>
+            The percent.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.PercentCompleteEventArgs.Message">
+            <summary>
+            Gets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.PercentCompleteEventArgs.IsError">
+            <summary>
+            Gets a value indicating whether [is error].
+            </summary>
+            <value>
+              <c>true</c> if [is error]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMCommon.Maintenance.PercentCompleteEventArgs.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="M:XAMCommon.Maintenance.PercentCompleteEventArgs.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.PercentCompleteEventArgs"/> class.
+            </summary>
+            <param name="percent">The percent.</param>
+            <param name="message">The message.</param>
+            <param name="errorMessage">The error message.</param>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMBackupInfo">
+            <summary>
+            Information for the Database Backup
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMBackupInfo.Name">
+            <summary>
+            Gets or sets the name of the backup info.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMBackupInfo.Description">
+            <summary>
+            Gets or sets the description of the backup info.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMBackupInfo.BackupDate">
+            <summary>
+            Gets or sets the date if the backup info.
+            </summary>
+        </member>
+        <member name="P:XAMCommon.Maintenance.XAMBackupInfo.Database">
+            <summary>
+            Gets or sets the database name of the backup info.
+            </summary>
+        </member>
+        <member name="T:XAMCommon.Maintenance.XAMSqlServerBackupException">
+            <summary>
+            XAM Sql Server Backup Exception
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackupException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackupException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackupException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackupException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackupException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackupException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:XAMCommon.Maintenance.XAMSqlServerBackupException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMCommon.Maintenance.XAMSqlServerBackupException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+    </members>
+</doc>

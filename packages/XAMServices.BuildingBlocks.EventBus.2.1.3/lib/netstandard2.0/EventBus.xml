@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventBus</name>
+    </assembly>
+    <members>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IDynamicIntegrationEventHandler`1">
+            <summary>
+            Dynamic wrapper Interface for Subscription Manager with specific event data type --> store type for kafka deserialize
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IDynamicIntegrationEventHandler`1.Handle(`0,XAMServices.BuildingBlocks.EventBus.Abstractions.MessageInfo)">
+            <summary>
+            Handles dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="eventData">The event message.</param>
+            <param name="msgInfo">The message info.</param>
+            <returns>A task that represents the asynchronous dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handling operation.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IDynamicIntegrationEventHandler">
+            <summary>
+            Dynamic wrapper Interface for Subscription Manager --> store type for kafka deserialize
+            </summary>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus">
+            <summary>
+            Interface describing an event bus.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Publish(XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent)">
+            <summary>
+            Publish an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="event">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Publish(System.String,XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent)">
+            <summary>
+            Publish an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="topic">The topic name.</param>
+            <param name="event">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Publish``1(``0,XAMServices.BuildingBlocks.EventBus.SerializerConfiguration)">
+            <summary>
+            Publish a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> with a specified <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/>.
+            </summary>
+            <typeparam name="TEvent">The type of the <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</typeparam>
+            <param name="event">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> to publish.</param>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Publish``1(System.String,``0,XAMServices.BuildingBlocks.EventBus.SerializerConfiguration)">
+            <summary>
+            Publish a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> with a specified <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/>.
+            </summary>
+            <typeparam name="TEvent">The type of the <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</typeparam>
+            <param name="topic">The name of the topic.</param>
+            <param name="event">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> to publish.</param>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Subscribe``2(XAMServices.BuildingBlocks.EventBus.SerializerConfiguration)">
+            <summary>
+            Subscribe to an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type.</typeparam>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Subscribe``2(System.String,XAMServices.BuildingBlocks.EventBus.SerializerConfiguration)">
+            <summary>
+            Subscribe to an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type.</typeparam>
+            <param name="topic">The name of the topic.</param>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.SubscribeDynamic``2(XAMServices.BuildingBlocks.EventBus.SerializerConfiguration,System.Boolean)">
+            <summary>
+            Subscribe to a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <typeparam name="TMessage">The type of the message.</typeparam>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+            <param name="readFromBeginning">Reads data from the beginning.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.SubscribeDynamic``2(System.Collections.Generic.IEnumerable{System.String},XAMServices.BuildingBlocks.EventBus.SerializerConfiguration,System.Boolean)">
+            <summary>
+            Subscribe to a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <typeparam name="TMessage">The type of the message.</typeparam>
+            <param name="topics">A list of topics to subscribe.</param>
+            <param name="config">The <see cref="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration"/> configuration.</param>
+            <param name="readFromBeginning">Reads data from the beginning.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Unsubscribe``2">
+            <summary>
+            Unsubscribe from an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler.</typeparam>
+            <typeparam name="TEvent">The type of the evant.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.Unsubscribe``2(System.String)">
+            <summary>
+            Unsubscribe from an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler.</typeparam>
+            <typeparam name="TEvent">The type of the evant.</typeparam>
+            <param name="topic">The name of the topic.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.UnsubscribeDynamic``2(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Unsubscribe from a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <typeparam name="TMessage">The type of <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</typeparam>
+            <param name="topics">The topic to unsubscribe to.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBus.GetTopics">
+            <summary>
+            Get all subscribable topics.
+            </summary>
+            <returns>All subscribable topics.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager">
+            <summary>
+            Interface describing an subscription manager.
+            </summary>
+        </member>
+        <member name="E:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.OnEventRemoved">
+            <summary>
+            Raised on event removed.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.IsEmpty">
+            <summary>
+            Indicates if the <see cref="T:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager"/>'s handles are empty.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.Clear">
+            <summary>
+            Clears all subscription handlers.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.AddSubscription``2">
+            <summary>
+            Adds an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription,
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to use for subscription.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to use for subscription.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.AddDynamicSubscription``1(System.String)">
+            <summary>
+            Add a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to use for subscription.</typeparam>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to use for subscription.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.RemoveSubscription``2">
+            <summary>
+            Removes a <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to remove.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to remove.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.RemoveDynamicSubscription``1(System.String)">
+            <summary>
+            Removes a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to remove.</typeparam>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to remove.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.HasSubscriptionsForEvent``1">
+            <summary>
+            Indicates if subscriptions for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> are available.
+            </summary>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to check.</typeparam>
+            <returns>True if a <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription with this type is available, otherwhise false.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.HasSubscriptionsForEvent(System.String)">
+            <summary>
+            Indicates if subscriptions for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> are available.
+            </summary>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to check.</param>
+            <returns>True if a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription with this type is available, otherwhise false.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.GetEventTypeByName(System.String)">
+            <summary>
+            Gets an event type by it's name.
+            </summary>
+            <param name="eventName">The name of the event to search.</param>
+            <returns>The event type searches by it's name.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.GetHandlersForEvent``1">
+            <summary>
+            Get all available subscription handlers for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to get subscription handlers for.</typeparam>
+            <returns>All available subscription handlers for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.GetHandlersForEvent(System.String)">
+            <summary>
+            Get all available subscription handlers for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="eventName">The dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to get subscription handlers for.</param>
+            <returns>All available subscription handlers for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IEventBusSubscriptionsManager.GetEventKey``1">
+            <summary>
+            Get the key for a specific event.
+            </summary>
+            <typeparam name="TEvent">The event type to get a key from.</typeparam>
+            <returns>The key of a specific event.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IIntegrationEventHandler`1">
+            <summary>
+            Wrapper Interface for Subscription Manager --> store type for kafka deserialize
+            </summary>
+            <typeparam name="TIntegrationEvent">The integraton event type.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.IIntegrationEventHandler`1.Handle(`0)">
+            <summary>
+            Handles typed <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="event">The event to handle.</param>
+            <returns>A task that represents the asynchronous typed <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handling operation.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.IIntegrationEventHandler">
+            <summary>
+            Wrapper Interface for Subscription Manager --> store type for kafka deserialize
+            </summary>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Abstractions.MessageInfo">
+            <summary>
+            Describes a message with a key and it's source.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Abstractions.MessageInfo.#ctor(System.String,System.String)">
+            <summary>
+            Describes a message with a key and it's source.
+            </summary>
+            <param name="key">The message key.</param>
+            <param name="source">The message source.</param>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.Abstractions.MessageInfo.Key">
+            <summary>
+            The message key.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.Abstractions.MessageInfo.Source">
+            <summary>
+            The messages source.
+            </summary>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent">
+            <summary>
+            The base <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type.
+            Derived types of this should be used for event bus communication.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent.#ctor">
+            <summary>
+            The base <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type.
+            Derived types of this should be used for event bus communication.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent.#ctor(System.Guid,System.DateTime)">
+            <summary>
+            The base <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type.
+            Derived types of this should be used for event bus communication.
+            </summary>
+            <param name="id">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>'s Id.</param>
+            <param name="createDate">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>'s creation date.</param>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent.Id">
+            <summary>
+            The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>'s Id.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent.CreationDate">
+            <summary>
+            The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>'s creation date.
+            </summary>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.Extensions.GenericTypeExtensions">
+            <summary>
+            Extension methodes for generic <see cref="T:System.Type"/> handling.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Extensions.GenericTypeExtensions.GetGenericTypeName(System.Type)">
+            <summary>
+            Builds the generic name of a specific <see cref="T:System.Type"/>,
+            in case of a non-generic <see cref="T:System.Type"/> returns it's <see cref="T:System.Type"/> name.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to get the generic name from.</param>
+            <returns>The generic name of a specific <see cref="T:System.Type"/>.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.Extensions.GenericTypeExtensions.GetGenericTypeName(System.Object)">
+            <summary>
+            Get the generic name of a specified object.
+            </summary>
+            <param name="object">The object to get a generic <see cref="T:System.Type"/> name from.</param>
+            <returns>The generic <see cref="T:System.Type"/> name from a specified object.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager">
+            <summary>
+            Implementation is used for in memory subscription management, if you would like to change use own strategy
+            </summary>
+            <summary>
+            Implementation is used for in memory subscription management, if you would like to change use own strategy
+            </summary>
+        </member>
+        <member name="E:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.OnEventRemoved">
+            <summary>
+            Raised on event removed.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.#ctor">
+            <summary>
+            Creates a new <see cref="T:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager"/> for subscription handling.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.IsEmpty">
+            <summary>
+            Indicates if the <see cref="T:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager"/>'s handles are empty.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.Clear">
+            <summary>
+            Clears all subscription handlers.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.AddSubscription``2">
+            <summary>
+            Adds an <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription,
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to use for subscription.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to use for subscription.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.AddDynamicSubscription``1(System.String)">
+            <summary>
+            Add a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to use for subscription.</typeparam>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to use for subscription.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.RemoveSubscription``2">
+            <summary>
+            Removes a <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to remove.</typeparam>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to remove.</typeparam>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.RemoveDynamicSubscription``1(System.String)">
+            <summary>
+            Removes a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription.
+            </summary>
+            <typeparam name="THandler">The dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> handler type to remove.</typeparam>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to remove.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.HasSubscriptionsForEvent``1">
+            <summary>
+            Indicates if subscriptions for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> are available.
+            </summary>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to check.</typeparam>
+            <returns>True if a <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription with this type is available, otherwhise false.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.HasSubscriptionsForEvent(System.String)">
+            <summary>
+            Indicates if subscriptions for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> are available.
+            </summary>
+            <param name="eventName">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to check.</param>
+            <returns>True if a dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> subscription with this type is available, otherwhise false.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.GetEventTypeByName(System.String)">
+            <summary>
+            Gets an event type by it's name.
+            </summary>
+            <param name="eventName">The name of the event to search.</param>
+            <returns>The event type searches by it's name.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.GetHandlersForEvent``1">
+            <summary>
+            Get all available subscription handlers for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <typeparam name="TEvent">The <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> type to get subscription handlers for.</typeparam>
+            <returns>All available subscription handlers for a specific <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.GetHandlersForEvent(System.String)">
+            <summary>
+            Get all available subscription handlers for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.
+            </summary>
+            <param name="eventName">The dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/> name to get subscription handlers for.</param>
+            <returns>All available subscription handlers for a specific, dynamic <see cref="T:XAMServices.BuildingBlocks.EventBus.Events.IntegrationEvent"/>.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.GetEventKey``1">
+            <summary>
+            Get the key for a specific event.
+            </summary>
+            <typeparam name="TEvent">The event type to get a key from.</typeparam>
+            <returns>The key of a specific event.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo">
+            <summary>
+            Subscription infos for the InMemoryEventBusSubscriptionManager.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo.IsDynamic">
+            <summary>
+            Indicates if this subscription is dynamic.
+            </summary>
+        </member>
+        <member name="P:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo.HandlerType">
+            <summary>
+            The subscription handler type.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo.#ctor(System.Boolean,System.Type)">
+            <summary>
+            Subscription infos for the InMemoryEventBusSubscriptionManager.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo.Dynamic(System.Type)">
+            <summary>
+            Get a dynamic subscription info of a specific handler type.
+            </summary>
+            <param name="handlerType">The handler type.</param>
+            <returns>A dynamic subscription info for a specific handler type.</returns>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.InMemoryEventBusSubscriptionsManager.SubscriptionInfo.Typed(System.Type)">
+            <summary>
+            Get a typed subscription info of a specific handler type.
+            </summary>
+            <param name="handlerType">The handler type.</param>
+            <returns>A typed subscription info for a specific handler type.</returns>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.PublishException">
+            <summary>
+            A custom EventBus.ApacheKafka exception that's thrown on failed publishes.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.PublishException.#ctor">
+            <summary>
+            A custom EventBus.ApacheKafka exception that's thrown on failed publishes.
+            </summary>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.PublishException.#ctor(System.String)">
+            <summary>
+            A custom EventBus.ApacheKafka exception that's thrown on failed publishes with a custom message.
+            </summary>
+            <param name="message">A custom exception message.</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.PublishException.#ctor(System.String,System.Exception)">
+            <summary>
+            A custom EventBus.ApacheKafka exception that's thrown on failed publishes with a custom message and inner exception.
+            </summary>
+            <param name="message">A custom exception message.</param>
+            <param name="innerException">A custom inner exception</param>
+        </member>
+        <member name="M:XAMServices.BuildingBlocks.EventBus.PublishException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            A custom EventBus.ApacheKafka exception that's thrown on failed publishes with a custom serialization info and streaming context.
+            </summary>
+            <param name="info">A custom exception serialization info.</param>
+            <param name="context">A custom exception streaming context.</param>
+        </member>
+        <member name="T:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration">
+            <summary>
+            Indicates the serialization configuration.
+            </summary>
+        </member>
+        <member name="F:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration.Proto">
+            <summary>
+            Protobuf serialization type.
+            </summary>
+        </member>
+        <member name="F:XAMServices.BuildingBlocks.EventBus.SerializerConfiguration.Json">
+            <summary>
+            Json serialization type.
+            </summary>
+        </member>
+    </members>
+</doc>

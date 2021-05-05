@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<SmoTargetDir Condition=" '$(SmoTargetDir)' == '' ">$(TargetDir)</SmoTargetDir>
+	</PropertyGroup>
+	<Target Name="SmoCopyLibsAnyCPU" BeforeTargets="AfterBuild" Condition="'$(Platform)' == 'AnyCPU'">
+		<ItemGroup>
+		  <SmoBinaries Include="$(MSBuildThisFileDirectory)..\..\runtimes\Microsoft.*.*" />
+		  <SmoBinaries32 Include="$(MSBuildThisFileDirectory)..\..\runtimes\Smo\x86\*.*" />
+		  <SmoBinaries64 Include="$(MSBuildThisFileDirectory)..\..\runtimes\Smo\x64\*.*" />
+		</ItemGroup>
+
+		<Message Importance="high" Text="Copying Smo managed files" />
+		<Copy SourceFiles="@(SmoBinaries)" DestinationFolder="$(SmoTargetDir)" SkipUnchangedFiles="true" />
+		<Message Importance="high" Text="Copying x86 Smo files" />
+		<Copy SourceFiles="@(SmoBinaries32)" DestinationFolder="$(SmoTargetDir)\Smo\x86" SkipUnchangedFiles="true" />
+		<Message Importance="high" Text="Copying x64 Smo files" />
+		<Copy SourceFiles="@(SmoBinaries64)" DestinationFolder="$(SmoTargetDir)\Smo\x64" SkipUnchangedFiles="true" />
+	</Target>		
+</Project>  
