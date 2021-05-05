@@ -1,0 +1,1520 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAMIO.Common</name>
+    </assembly>
+    <members>
+        <member name="T:XAMIO.Common.IPAddressExtensions">
+            <summary>
+            IP Address Extension Methods
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.IPAddressExtensions.SubnetMaskClassA">
+            <summary>
+            The subnet mask class a
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.IPAddressExtensions.SubnetMaskClassB">
+            <summary>
+            The subnet mask class b
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.IPAddressExtensions.SubnetMaskClassC">
+            <summary>
+            The subnet mask class c
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.IsLocalIpAddress(System.Net.IPAddress)">
+            <summary>
+            Determines whether [is local ip address] [the specified ip].
+            </summary>
+            <param name="ip">The ip.</param>
+            <returns>
+              <c>true</c> if [is local ip address] [the specified ip]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.IsValidIP(System.String)">
+            <summary>
+            method to validate an IP address
+            using regular expressions. The pattern
+            being used will validate an ip address
+            with the range of 1.0.0.0 to 255.255.255.255
+            </summary>
+            <param name="addr">Address to validate</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetLocalIPAddress">
+            <summary>
+            Gets the local ip address.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetLocalIPAddresses">
+            <summary>
+            Gets a list of all local ip addresses
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetLocalBroadcastAddress">
+            <summary>
+            Gets the local broadcast address.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetBroadcastAddress(System.Net.IPAddress,System.Net.IPAddress)">
+            <summary>
+            Gets the broadcast address.
+            </summary>
+            <param name="address">The address.</param>
+            <param name="subnetMask">The subnet mask.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Lengths of IP address and subnet mask do not match.</exception>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetNetworkAddress(System.Net.IPAddress,System.Net.IPAddress)">
+            <summary>
+            Gets the network address.
+            </summary>
+            <param name="address">The address.</param>
+            <param name="subnetMask">The subnet mask.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Lengths of IP address and subnet mask do not match.</exception>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.IsInSameSubnet(System.Net.IPAddress,System.Net.IPAddress,System.Net.IPAddress)">
+            <summary>
+            Determines whether [is in same subnet] [the specified address2].
+            </summary>
+            <param name="address2">The address2.</param>
+            <param name="address">The address.</param>
+            <param name="subnetMask">The subnet mask.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetSubnetMask(System.Net.IPAddress)">
+            <summary>
+            Gets the subnet mask.
+            </summary>
+            <param name="address">The address.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.CreateSubnetMaskByHostBitLength(System.Int32)">
+            <summary>
+            Creates the length of the subnet mask by host bit.
+            </summary>
+            <param name="hostpartLength">Length of the hostpart.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Number of hosts is to large for IPv4</exception>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.CreateSubnetMaskByNetBitLength(System.Int32)">
+            <summary>
+            Creates the length of the subnet mask by net bit.
+            </summary>
+            <param name="netpartLength">Length of the netpart.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.CreateSubnetMaskByHostNumber(System.Int32)">
+            <summary>
+            Creates the subnet mask by host number.
+            </summary>
+            <param name="numberOfHosts">The number of hosts.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.IPAddressExtensions.GetADSIPBytesFromString(System.String)">
+            <summary>
+            Gets the adsip bytes from string.
+            </summary>
+            <param name="IP">The ip.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.Net.CommunicationException">
+            <summary>
+            Connection Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.CommunicationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.CommunicationException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.CommunicationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.CommunicationException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.FrameToLessDataException">
+            <summary>
+            Frame to less Data Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.FrameToLessDataException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.FrameToLessDataException"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.FrameToLessDataException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.FrameToLessDataException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.IAsyncConnection">
+            <summary>
+            Async Connection Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.IAsyncConnection.LastReceived">
+            <summary>
+            Gets the last received.
+            </summary>
+            <value>
+            The last received.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.IAsyncConnection.MinTelegramLength">
+            <summary>
+            Gets the length of the min telegram.
+            </summary>
+            <value>
+            The length of the min telegram.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.IAsyncConnection.AnalyseData(System.Byte[],System.Boolean@,System.Boolean@,System.Int32@)">
+            <summary>
+            Analyses the data.
+            </summary>
+            <param name="receivebytes">The receivebytes.</param>
+            <param name="frameToLessData">if set to <c>true</c> [frame to less data].</param>
+            <param name="frameError">if set to <c>true</c> [frame error].</param>
+            <param name="telegramLength">Length of the telegram.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.IAsyncConnection.Send(System.Byte[])">
+            <summary>
+            Sends the specified data.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.IAsyncConnection.StartReceiving">
+            <summary>
+            Starts the receiving.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.IAsyncConnection`1">
+            <summary>
+            IAsynConnection of Telegram Interface for Generic Async Tcp Client Implmentation
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+        </member>
+        <member name="P:XAMIO.Common.Net.IAsyncConnection`1.LastReceived">
+            <summary>
+            Gets the last received.
+            </summary>
+            <value>
+            The last received.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.IAsyncConnection`1.MinTelegramLength">
+            <summary>
+            Gets the length of the min telegram.
+            </summary>
+            <value>
+            The length of the min telegram.
+            </value>
+        </member>
+        <member name="E:XAMIO.Common.Net.IAsyncConnection`1.TelegramReceived">
+            <summary>
+            Occurs when [telegram received].
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.IAsyncConnection`1.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.IAsyncConnection`1.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.TelegramReceivedEventArgs`1">
+            <summary>
+            Telegram Received Event Args
+            </summary>
+            <typeparam name="T">The type of the elegram.</typeparam>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramReceivedEventArgs`1.Telegram">
+            <summary>
+            Gets the telegram.
+            </summary>
+            <value>
+            The telegram.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramReceivedEventArgs`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TelegramReceivedEventArgs`1"/> class.
+            </summary>
+            <param name="telegram">The telegram.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.IConnection">
+            <summary>
+            Connection Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.IConnection.ReceiveTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>
+            The read timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.IConnection.SendTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>
+            The write timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.IConnection.IsConnected">
+            <summary>
+            Gets a value indicating whether this instance is connected.
+            </summary>
+            <value>
+            <c>true</c> if this instance is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.IConnection.ConnectionError">
+            <summary>
+            Gets or sets a value indicating whether [connection error].
+            </summary>
+            <value>
+              <c>true</c> if [connection error]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.IConnection.Connect">
+            <summary>
+            Connects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.IConnection.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.ISerialPort">
+            <summary>
+            Com Connection Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.PortName">
+            <summary>
+            Gets the name of the port.
+            </summary>
+            <value>
+            The name of the port.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.BaudRate">
+            <summary>
+            Gets or sets the baud rate.
+            </summary>
+            <value>
+            The baud rate.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.Parity">
+            <summary>
+            Gets or sets the parity.
+            </summary>
+            <value>
+            The parity.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.DataBits">
+            <summary>
+            Gets or sets the data bits.
+            </summary>
+            <value>
+            The data bits.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.StopBits">
+            <summary>
+            Gets or sets the stop bits.
+            </summary>
+            <value>
+            The stop bits.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ISerialPort.Handshake">
+            <summary>
+            Gets or sets the handshake.
+            </summary>
+            <value>
+            The handshake.
+            </value>
+        </member>
+        <member name="T:XAMIO.Common.Net.ISyncConnection">
+            <summary>
+            Sync Connection Interface
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.ISyncConnection.Send(System.Byte[])">
+            <summary>
+            Sends the specified data.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.ISyncConnection.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.ISyncConnection.Receive">
+            <summary>
+            Receives this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.ISyncConnection.Receive``1">
+            <summary>
+            Receives a telegram of type Telegram.
+            </summary>
+            <typeparam name="Telegram">The type of the Telegram.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.ISyncConnection.SendReceive``1(``0,System.Boolean)">
+            <summary>
+            Sends the receive.
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="request">The request.</param>
+            <param name="responseExpected">if set to <c>true</c> [response expected].</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.Net.ITcpConnection">
+            <summary>
+            Tcp Handler Interface
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.ITcpConnection.IPAddress">
+            <summary>
+            Gets the IP address.
+            </summary>
+            <value>
+            The IP address.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.ITcpConnection.Port">
+            <summary>
+            Gets the port.
+            </summary>
+            <value>
+            The port.
+            </value>
+        </member>
+        <member name="T:XAMIO.Common.Net.ISyncTcpConnection">
+            <summary>
+            Sync TCP Handler Interface
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.IAsyncTcpConnection">
+            <summary>
+            Async TCP Handler Interface
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.IAsyncTcpConnection`1">
+            <summary>
+            IAsync Tco Connection Interface
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+        </member>
+        <member name="T:XAMIO.Common.Net.SerialPort">
+            <summary>
+            Serial Serial
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.PortName">
+            <summary>
+            Gets the name of the port.
+            </summary>
+            <value>
+            The name of the port.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.IsConnected">
+            <summary>
+            Gets a value indicating whether this instance is connected.
+            </summary>
+            <value>
+            <c>true</c> if this instance is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.ConnectionError">
+            <summary>
+            Gets or sets a value indicating whether [connection error].
+            </summary>
+            <value>
+              <c>true</c> if [connection error]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.BaudRate">
+            <summary>
+            Gets or sets the baud rate.
+            </summary>
+            <value>
+            The baud rate.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.Parity">
+            <summary>
+            Gets or sets the parity.
+            </summary>
+            <value>
+            The parity.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.DataBits">
+            <summary>
+            Gets or sets the data bits.
+            </summary>
+            <value>
+            The data bits.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.StopBits">
+            <summary>
+            Gets or sets the stop bits.
+            </summary>
+            <value>
+            The stop bits.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.Handshake">
+            <summary>
+            Gets or sets the handshake.
+            </summary>
+            <value>
+            The handshake.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.ReceiveTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>
+            The read timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.SendTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>
+            The write timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.SerialPort.LastSendData">
+            <summary>
+            Gets the last send data.
+            </summary>
+            <value>
+            The last send data.
+            </value>
+        </member>
+        <member name="F:XAMIO.Common.Net.SerialPort.trace">
+            <summary>
+            XAM trace
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.#ctor(System.String,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.SerialPort"/> class.
+            </summary>
+            <param name="portName">Name of the port.</param>
+            <param name="trace">The trace delegate.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits,System.IO.Ports.Handshake,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.SerialPort"/> class.
+            </summary>
+            <param name="portName">Name of the port.</param>
+            <param name="baudRate">The baud rate.</param>
+            <param name="parity">The parity.</param>
+            <param name="dataBits">The data bits.</param>
+            <param name="stopBits">The stop bits.</param>
+            <param name="handshake">The handshake.</param>
+            <param name="trace">The trace delegate.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Send(System.Byte[])">
+            <summary>
+            Sends the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <exception cref="T:System.Exception">COM not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Receive">
+            <summary>
+            Receives this instance.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception">COM not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Connect">
+            <summary>
+            Connects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.Receive``1">
+            <summary>
+            Receives a telegram of type Telegram.
+            </summary>
+            <typeparam name="Telegram">The type of the Telegram.</typeparam>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.SerialPort.SendReceive``1(``0,System.Boolean)">
+            <summary>
+            Sends the receive.
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="request">The request.</param>
+            <param name="responseExpected">if set to <c>true</c> [response expected].</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpClientAsync`1">
+            <summary>
+            Tcp Client Async
+            </summary>
+            <typeparam name="Telegram">The type of the Telegram.</typeparam>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientAsync`1.LastReceived">
+            <summary>
+            Last Time Data Recived
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientAsync`1.MinTelegramLength">
+            <summary>
+            Minimum Telegram Length
+            </summary>
+        </member>
+        <member name="E:XAMIO.Common.Net.TcpClientAsync`1.TelegramReceived">
+            <summary>
+            Occurs when [telegram received].
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsync`1.#ctor(System.String,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientAsyncBase"/> class.
+            </summary>
+            <param name="ipAddress">The IP address.</param>
+            <param name="port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsync`1.#ctor(System.String,System.Int32,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientAsyncBase"/> class.
+            </summary>
+            <param name="ipAddress">The IP address.</param>
+            <param name="port">The port.</param>
+            <param name="minTelegramLength">Length of the min telegram.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsync`1.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsync`1.Start">
+            <summary>
+            Start Receiving
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsync`1.OnTelegramReceived(`0)">
+            <summary>
+            Called when [telegram received].
+            </summary>
+            <param name="telegram">The telegram.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpClientAsyncBase">
+            <summary>
+            Async Tcp Client
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientAsyncBase.LastReceived">
+            <summary>
+            Last Time Data Recived
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientAsyncBase.MinTelegramLength">
+            <summary>
+            Minimum Telegram Length
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsyncBase.#ctor(System.String,System.Int32,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientAsyncBase"/> class.
+            </summary>
+            <param name="ipAddress">The IP address.</param>
+            <param name="port">The port.</param>
+            <param name="minTelegramLength">Length of the min telegram.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsyncBase.StartReceiving">
+            <summary>
+            Start Receiving
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsyncBase.Send(System.Byte[])">
+            <summary>
+            Send Data
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientAsyncBase.AnalyseData(System.Byte[],System.Boolean@,System.Boolean@,System.Int32@)">
+            <summary>
+            Analyses the data.
+            </summary>
+            <param name="receivebytes">The receivebytes.</param>
+            <param name="frameToLessData">if set to <c>true</c> [frame to less data].</param>
+            <param name="frameError">if set to <c>true</c> [frame error].</param>
+            <param name="telegramLength">Length of the telegram.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpClientBase">
+            <summary>
+            Tcp Client Base
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.TcpHandlerTraceSwitch">
+            <summary>
+            Gets the TCP handler trace switch.
+            </summary>
+            <value>
+            The TCP handler trace switch.
+            </value>
+        </member>
+        <member name="F:XAMIO.Common.Net.TcpClientBase.client">
+            <summary>
+            Tcp Client
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.TcpClientBase.trace">
+            <summary>
+            XAM trace
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.Port">
+            <summary>
+            Destination TCP Port
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.IPAddress">
+            <summary>
+            Destination IP-Address 
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.IsConnected">
+            <summary>
+            Tcp Client Connected
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.ConnectionError">
+            <summary>
+            External Tcp Connection Error
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.ReceiveTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>
+            The read timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpClientBase.SendTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>
+            The write timeout.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.#ctor(System.String,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientBase"/> class.
+            </summary>
+            <param name="ipAddress">The ip address.</param>
+            <param name="port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.Connect">
+            <summary>
+            Connect to TCP Endpoint
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.Disconnect">
+            <summary>
+            Disconnect from TCP Endpoint
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientBase.ShutdownClient">
+            <summary>
+            Shutdown the TCPClient
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpClientSync">
+            <summary>
+            Sync Tcp Client
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.#ctor(System.String,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientSync"/> class.
+            </summary>
+            <param name="IPAddress">The IP address.</param>
+            <param name="Port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.Send(System.Byte[])">
+            <summary>
+            Sends the specified data. This function is blocking.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+            <exception cref="T:System.Exception">TCP not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.Receive">
+            <summary>
+            Receives data. This function is blocking
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception">TCP not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.Receive``1">
+            <summary>
+            Receives this instance.
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <returns></returns>
+            <exception cref="T:XAMIO.Common.Net.CommunicationException">SendReceive Timeout</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpClientSync.SendReceive``1(``0,System.Boolean)">
+            <summary>
+            Sends the request and receive a Telegram
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="request">The request.</param>
+            <param name="responseExpected">if set to <c>true</c> [response expected].</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpListenerBase">
+            <summary>
+            Tcp Listener Base
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpListenerBase.NewConnectionDelegate">
+            <summary>
+            New Connection Delegate
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="E:XAMIO.Common.Net.TcpListenerBase.OnClientConnected">
+            <summary>
+            On  new client connected event
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.TcpListenerBase.ReceiveDataDelegate">
+            <summary>
+            Receive Data Delegate
+            </summary>
+            <param name="data">The data.</param>
+            <param name="client">The client.</param>
+        </member>
+        <member name="E:XAMIO.Common.Net.TcpListenerBase.OnReceived">
+            <summary>
+            On Received event
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.TcpListenerBase.server">
+            <summary>
+            Tcp Client
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.TcpListenerBase.trace">
+            <summary>
+            XAM trace
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.Port">
+            <summary>
+            Destination TCP Port
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.IPAddress">
+            <summary>
+            Destination IP-Address 
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.IsConnected">
+            <summary>
+            Tcp Client Connected
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.ConnectionError">
+            <summary>
+            External Tcp Connection Error
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.ReceiveTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>
+            The read timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TcpListenerBase.SendTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>
+            The write timeout.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.#ctor(System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpListenerBase"/> class.
+            </summary>
+            <param name="port">local port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.Dispose">
+            <summary>
+            Dispose TCP Handler
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.Connect">
+            <summary>
+            Create TCP Listener
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.Disconnect">
+            <summary>
+            Disconnect from TCP Endpoint
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.ShutdownClient">
+            <summary>
+            Shutdown the TCPClient
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.ReceiveCallback(System.IAsyncResult)">
+            <summary>Receive Call back function. Receive frame, analyze it and store it in PackageList!</summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.Send(System.Byte[],System.Net.Sockets.Socket)">
+            <summary>
+            send data
+            </summary>
+            <param name="Data">data</param>
+            <param name="client">TcpClient where the data should be sent</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.Send(System.Byte[])">
+            <summary>
+            send data to all connected TCP Client (maintain them also)
+            </summary>
+            <param name="Data">data</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TcpListenerBase.ConnectedClients">
+            <summary>
+            Get a list of all connected clients
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.Net.TelegramBase">
+            <summary>
+            Telegram Base class
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.TelegramBase.frametolessdata">
+            <summary>
+            Frame to less Date
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.TelegramBase.error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.Trace">
+            <summary>
+            The trace
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.FrameToLessData">
+            <summary>
+            Gets a value indicating whether [frame to less data].
+            </summary>
+            <value>
+              <c>true</c> if [frame to less data]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.Error">
+            <summary>
+            Gets a value indicating whether this <see cref="T:XAMIO.Common.Net.TelegramBase"/> is error.
+            </summary>
+            <value>
+              <c>true</c> if error; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.Length">
+            <summary>
+            Gets or sets the length.
+            </summary>
+            <value>
+            The length.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.ReceiveTime">
+            <summary>
+            Gets or sets the receive time.
+            </summary>
+            <value>
+            The receive time.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.DataArrayString">
+            <summary>
+            Gets the data array string.
+            </summary>
+            <value>
+            The data array string.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.TelegramBase.Sender">
+            <summary>
+            Gets or sets the sender.
+            </summary>
+            <value>
+            The sender.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TelegramBase"/> class.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.#ctor(XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TelegramBase"/> class.
+            </summary>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.Decode(System.Byte[])">
+            <summary>
+            Decodes the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <exception cref="T:System.InvalidOperationException">override this function</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.Encode">
+            <summary>
+            Encodes this instance.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">override this function</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.CreateNew``1(XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Creates a new Instance of the generic XAMDriverTelegramBase
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="trace">The trace.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.FromBytes``1(System.Byte[],XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Froms the bytes.
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="data">The data.</param>
+            <param name="trace">The trace.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramBase.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:XAMIO.Common.Net.TelegramDecodeException">
+            <summary>
+            Frame Decode Error Exception
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.TelegramDecodeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TelegramDecodeException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.UdpClientBase">
+            <summary>
+            Udp Client Base
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.UdpClientBase.client">
+            <summary>
+            The client
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.Net.UdpClientBase.trace">
+            <summary>
+            The trace
+            </summary>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.UdpClientTraceSwitch">
+            <summary>
+            Gets the UDP client trace switch.
+            </summary>
+            <value>
+            The UDP client trace switch.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.RawDataTraceSwitch">
+            <summary>
+            Gets the UDP client trace switch.
+            </summary>
+            <value>
+            The UDP client trace switch.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.ReceiveTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>
+            The read timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.SendTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>
+            The write timeout.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.IsBound">
+            <summary>
+            Gets a value indicating whether [is bound].
+            </summary>
+            <value>
+              <c>true</c> if [is bound]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.IsConnected">
+            <summary>
+            Gets a value indicating whether this instance is connected.
+            </summary>
+            <value>
+            <c>true</c> if this instance is connected; otherwise, <c>false</c>.
+            </value>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.ConnectionError">
+            <summary>
+            Gets or sets a value indicating whether [connection error].
+            </summary>
+            <value>
+              <c>true</c> if [connection error]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpClientBase.Port">
+            <summary>
+            Gets the port.
+            </summary>
+            <value>
+            The port.
+            </value>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientBase.#ctor(System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.UdpClientBase"/> class.
+            </summary>
+            <param name="port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientBase.Connect">
+            <summary>
+            Connects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientBase.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientBase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.UdpClientSync">
+            <summary>
+            Sync Udp Client
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.#ctor(System.Net.IPAddress,System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.TcpClientSync"/> class.
+            </summary>
+            <param name="destination">The IP address.</param>
+            <param name="Port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.Send(System.Byte[])">
+            <summary>
+            Sends the specified data. This function is blocking.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+            <exception cref="T:System.Exception">TCP not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.Receive">
+            <summary>
+            Receives data. This function is blocking
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception">TCP not connected</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.Receive``1">
+            <summary>
+            Receives this instance.
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <returns></returns>
+            <exception cref="T:XAMIO.Common.Net.CommunicationException">SendReceive Timeout</exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpClientSync.SendReceive``1(``0,System.Boolean)">
+            <summary>
+            Sends the request and receive a Telegram
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+            <param name="request">The request.</param>
+            <param name="responseExpected">if set to <c>true</c> [response expected].</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.Net.UdpListenerAsync`1">
+            <summary>
+            Udp Listener Async
+            </summary>
+            <typeparam name="Telegram">The type of the elegram.</typeparam>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpListenerAsync`1.LastReceived">
+            <summary>
+            Gets the last received.
+            </summary>
+            <value>
+            The last received.
+            </value>
+        </member>
+        <member name="P:XAMIO.Common.Net.UdpListenerAsync`1.MinTelegramLength">
+            <summary>
+            Gets the minimum length of the telegram.
+            </summary>
+            <value>
+            The minimum length of the telegram.
+            </value>
+        </member>
+        <member name="E:XAMIO.Common.Net.UdpListenerAsync`1.TelegramReceived">
+            <summary>
+            Occurs when [telegram received].
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.#ctor(System.Int32,XAMCommon.Trace.TraceDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAMIO.Common.Net.UdpListenerAsync`1"/> class.
+            </summary>
+            <param name="port">The port.</param>
+            <param name="trace">The trace.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.Send(XAMIO.Common.Net.TelegramBase)">
+            <summary>
+            Sends the specified request. - ! Not implemented ! - 
+            </summary>
+            <param name="request">The request.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.Send(`0,System.Net.IPAddress)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="destination">The destination.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.Send(`0,System.Net.IPEndPoint)">
+            <summary>
+            Sends the specified request.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="destination">The destination.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.Connect">
+            <summary>
+            Connects this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.UdpListenerAsync`1.OnTelegramReceived(`0)">
+            <summary>
+            Called when [telegram received].
+            </summary>
+            <param name="telegram">The telegram.</param>
+        </member>
+        <member name="T:XAMIO.Common.Net.XAMPing">
+            <summary>
+            XAMPinger class
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.#ctor(System.Net.IPAddress)">
+            <summary>
+            Creates a new XAMPinger instance
+            </summary>
+            <param name="address">The target IP-address.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.#ctor(System.String)">
+            <summary>
+            Creates a new XAMPinger instance.
+            </summary>
+            <param name="address">The target IP-address.</param>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.Ping">
+            <summary>
+            Sends a ping to the target address.
+            </summary>
+            <returns>The status of the ping.</returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.Ping(System.Net.IPAddress)">
+            <summary>
+            Sends a ping to the address.
+            </summary>
+            <param name="adr">The target IP-address</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.Dispose">
+            <summary>
+            Dispose the XAMPinger
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.Net.XAMPing.Dispose(System.Boolean)">
+            <summary>
+            Dispose the internal resources
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:XAMIO.Common.CRC8">
+            <summary>
+            CRC 8 Calculation
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.CRC8.Compute(System.Byte[])">
+            <summary>
+            Computes the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.CRC8.Check(System.Byte[],System.Byte)">
+            <summary>
+            Checks the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="crc">The CRC.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.CRC8ekey">
+            <summary>
+            CRC 8 for ekey
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.CRC8ekey.table">
+            <summary>
+            The table
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.CRC8ekey.Compute(System.Byte[])">
+            <summary>
+            Computes the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.InstanceUtils">
+            <summary>
+            Instance Utils
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.InstanceUtils.GetParentName(System.String)">
+            <summary>
+            Gets the name of the parent.
+            </summary>
+            <param name="instanceName">Name of the instance.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.MemberwiseEqualityObject">
+            <summary>
+            Base class that provides a dynamic, memberwise Equals/GetHashCode 
+            implementation. Rather than using reflection, methods are created 
+            using compiled expression trees.
+            </summary>
+        </member>
+        <member name="T:XAMIO.Common.MemberwiseEqualityObject.MemberwiseFunctions">
+            <summary>
+            Used to hold delegates for the compiled methods.
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.MemberwiseEqualityObject.MemberwiseFunctions.EqualsFunc">
+            <summary>
+            Delegate for the Equals method.
+            </summary>
+        </member>
+        <member name="F:XAMIO.Common.MemberwiseEqualityObject.MemberwiseFunctions.GetHashCodeFunc">
+            <summary>
+            Delegate for the GetHashCode method.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.#cctor">
+            <summary>
+            Static contructor.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.#ctor">
+            <summary>
+            Dynamically compiles the Equals/GetHashCode functions on the 
+            first call to a subclass constructor.
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.MakeGetHashCodeMethod(System.Type)">
+            <summary>
+            Creates the GetHashCode() method.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.MakeEqualsMethod(System.Type)">
+            <summary>
+            Creates the Equals() method.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.GetHashCode">
+            <summary>
+            Returns the member-wise hash code for this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAMIO.Common.MemberwiseEqualityObject.Equals(System.Object)">
+            <summary>
+            Determines whether two instances are equal, using a member-wise comparison.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XAMIO.Common.XAMMiscUtils">
+            <summary>
+            miscellaneous utils
+            </summary>
+        </member>
+        <member name="M:XAMIO.Common.XAMMiscUtils.IsNumeric(System.Object)">
+            <summary>
+            Determines whether the specified expression is numeric.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+              <c>true</c> if the specified expression is numeric; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAMIO.Common.XAMMiscUtils.IsProcessRunning(System.String)">
+            <summary>
+            Determines whether [is process running] [the specified name].
+            </summary>
+            <param name="processName">The process name.</param>
+            <returns>
+              <c>true</c> if [is process running] [the specified name]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+    </members>
+</doc>
