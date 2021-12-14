@@ -22,7 +22,8 @@ namespace XAMIO.UmpClient
         /// <param name="Name">Driver Name</param>
         /// <param name="XAMServerIP">XAMServer IP</param>
         public XAMUmpClient(bool StartImmediate, string XAMServerIP, XAMUmpClientConfig config)
-            : base(null, XAMUmpClientService.XAMUmpClientName, XAMServerIP, StartImmediate, true, XAMVarListMode.IOVariablesFromDB)
+            : base(null, XAMUmpClientService.XAMUmpClientName, XAMServerIP, StartImmediate, true, 
+                  XAMCommon.XAMControlDB.UserLogMode.All, XAMVarListMode.IOVariablesFromDB)
         {
             Config = config;
 

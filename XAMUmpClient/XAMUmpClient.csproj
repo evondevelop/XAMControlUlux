@@ -1,45 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9AC447B2-D26E-412B-B0D2-7A35B306F028}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XAMUmpClient</RootNamespace>
-    <AssemblyName>XAMUmpClient</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net472</TargetFramework>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyTitle>XAMUmpClient</AssemblyTitle>
+    <Product>XAMUmpClient</Product>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>..\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>..\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>XAMDriverCommon.ico</ApplicationIcon>
@@ -48,164 +28,47 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\bin\$(Platform)\$(Configuration)\</OutputPath>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
+    <OutputPath>..\bin\$(Platform)\$(Configuration)\</OutputPath>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\bin\$(Platform)\$(Configuration)\</OutputPath>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
+    <OutputPath>..\bin\$(Platform)\$(Configuration)\</OutputPath>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLine, Version=2.7.82.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineParser.2.7.82\lib\net461\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="EventBus, Version=1.3.0.0, Culture=neutral, PublicKeyToken=ef73db4779b609cd, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMServices.BuildingBlocks.EventBus.2.1.3\lib\netstandard2.0\EventBus.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf, Version=3.12.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.12.3\lib\net45\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.7.0\lib\net45\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="XAMCom.OpcUa, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMCommon.2.7.3\lib\net472\XAMCom.OpcUa.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.Base, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.Common.Base.2.6.4\lib\net472\XAMCommon.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.ClientCallback, Version=1.0.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.Common.ClientCallback.2.6.3\lib\net472\XAMCommon.ClientCallback.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.Maintenance, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.Common.Maintenance.2.6.3\lib\net472\XAMCommon.Maintenance.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.Trace, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.Common.Trace.2.6.6\lib\net472\XAMCommon.Trace.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.XAMOnlineValueConverters, Version=1.0.7.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMCommon.XAMOnlineValueConverters.1.0.7\lib\netstandard2.0\XAMCommon.XAMOnlineValueConverters.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommon.XAMOnlineValues, Version=1.0.6.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMCommon.XAMOnlineValues.1.0.6\lib\netstandard2.0\XAMCommon.XAMOnlineValues.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMCommonX4, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMCommon.2.7.3\lib\net472\XAMCommonX4.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMIO.BACnet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMIO.BACnet.2.6.44\lib\net472\XAMIO.BACnet.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMIO.Common, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMIO.Common.2.6.4\lib\net472\XAMIO.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMIOBase, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMIO.2.7.3\lib\net472\XAMIOBase.dll</HintPath>
-    </Reference>
-    <Reference Include="XAMIOCommon.Utils, Version=2.4.0.0, Culture=neutral, PublicKeyToken=50817396c6ebef72, processorArchitecture=MSIL">
-      <HintPath>..\packages\XAMControl.XAMIO.2.7.3\lib\net472\XAMIOCommon.Utils.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XAMUmpClient.cs" />
-    <Compile Include="XAMUmpClientCom.cs" />
-    <Compile Include="XAMUmpClientItem.cs" />
-    <Compile Include="XAMUmpClientService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
     <None Include="app.manifest" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="XAMDriverCommon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ulux\XAMUmp\XAMUlux.csproj">
-      <Project>{b3bc1a58-2d64-4f54-be92-f7345b51047a}</Project>
-      <Name>XAMUlux</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <PackageReference Include="XAMControl.Driver.XAMDriverCommon" Version="1.1.0" />
+    <PackageReference Include="XAMControl.XAMCommon.NLogTargets" Version="1.0.13" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\XAMControl.Common.Maintenance.2.6.3\build\net472\XAMControl.Common.Maintenance.targets" Condition="Exists('..\packages\XAMControl.Common.Maintenance.2.6.3\build\net472\XAMControl.Common.Maintenance.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\XAMControl.Common.Maintenance.2.6.3\build\net472\XAMControl.Common.Maintenance.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\XAMControl.Common.Maintenance.2.6.3\build\net472\XAMControl.Common.Maintenance.targets'))" />
-  </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <ProjectReference Include="..\Ulux\XAMUmp\XAMUlux.csproj" />
+  </ItemGroup>
 </Project>
