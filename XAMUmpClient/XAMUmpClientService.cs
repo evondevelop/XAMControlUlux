@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using XAMCommon.Services;
+using XAMIO.Base.Service;
 
 namespace XAMIO.UmpClient
 {
@@ -17,7 +18,7 @@ namespace XAMIO.UmpClient
     }
 
     [System.ComponentModel.DesignerCategory("")]
-    public class XAMUmpClientService : XAMCommon.Services.XAMWinServiceBase<XAMUmpClientConfig>
+    public class XAMUmpClientService : XAMIOBaseService<XAMUmpClientConfig>
     {
         public const string XAMUmpClientName = "XAMUmpClient";
         protected override IXAMService CreateService(string xamserverIP, XAMUmpClientConfig config, bool startImmediate)
@@ -27,16 +28,16 @@ namespace XAMIO.UmpClient
 
         static void Main(string[] Args)
         {
-            XAMUmpClientService opcUaService = new XAMUmpClientService(Args);
+            _ = new XAMUmpClientService(Args);
         }
 
         public XAMUmpClientService()
-             : base(XAMUmpClientName)
+             : base(null, XAMUmpClientName)
         {
         }
 
         public XAMUmpClientService(string[] Args)
-            : base(XAMUmpClientName, Args)
+            : base(null, XAMUmpClientName, Args)
         {
         }
     }

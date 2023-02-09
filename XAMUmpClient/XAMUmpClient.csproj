@@ -65,8 +65,8 @@
     <Content Include="XAMDriverCommon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="XAMControl.Driver.XAMDriverCommon" Version="1.1.0" />
-    <PackageReference Include="XAMControl.XAMCommon.NLogTargets" Version="1.0.13" />
+    <PackageReference Include="XAMControl.Driver.XAMDriverCommon" Version="1.2.0" />
+    <PackageReference Include="XAMControl.XAMCommon.NLogTargets" Version="1.0.15" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ulux\XAMUmp\XAMUlux.csproj" />
