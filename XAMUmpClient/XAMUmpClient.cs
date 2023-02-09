@@ -7,7 +7,7 @@ using XAMIO.Base;
 namespace XAMIO.UmpClient
 {
     /// <summary>
-    /// XAM IO class for OPC UA Client Driver interconnection
+    /// XAM IO class for Ulux Driver interconnection
     /// </summary>
     class XAMUmpClient : XAMIOBase
     {
